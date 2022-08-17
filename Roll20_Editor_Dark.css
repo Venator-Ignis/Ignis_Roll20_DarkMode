@@ -1,16 +1,13 @@
 @-moz-document domain("app.roll20.net") {
 /* ==UserStyle==
 @name         Venator_Ignis Roll20 Dark
-@version      1.0.34
+@version      1.0.85
 @author       Venator_Ignis
 ==/UserStyle== */
 }
 
 @-moz-document url-prefix("https://app.roll20.net/") {
 /* Loading Screen */
-/* -------------------------------------------------------------------------- */
-/*                                Global Things                               */
-/* -------------------------------------------------------------------------- */
 :root {
     --color-bg-light: #242533;
     --color-bg-light-rgba: rgb(36, 37, 51, 0.95);
@@ -1451,7 +1448,8 @@
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
-/* -------------------------------- ELEMENTS -------------------------------- */
+/* ELEMENTS */
+
 /* Scrollbar */
 #editor-wrapper::-webkit-scrollbar,
 #rightsidebar .ui-tabs-panel::-webkit-scrollbar,
@@ -4995,7 +4993,7 @@ div.clear + strong {
     background-position-x: 3px, calc(100% - 3px) !important;
     background-position-y: 3px, 3px !important;
     background-size: 20px !important;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAC3UExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9lRJuQIAAAA8dFJOUwBiZjReKtKlcjY6B5WdBAHcwwr3E/x08pfIKy7OG4zVekdPeNkjfohBbA35PK92gknLkBaYu1mix+Ft6WY0sRUAAAIySURBVDjLtZTHbuNAEESLWaQYREUr52BYliw5777//649jAK5kO2T+zAYEIXqqWZ1Sb9Tzy/D0635NI+DIJ4/NW8CQxZDSXW72+Jc3T/1W0AWdVkdStWZVMt9LesOeNVfoDZyI8+L3LgG4IdF4MuJ4DloPUbXz9Ej8GAVgMOFAYbKJC3tdRCs7aWk0AfuC8h6DkByvQJjK1X1Dihy1l8BaEu9gpaFI03gofTOYRgDFSnJV1PPm64GQMOVEvCv2q2/L1LbcF60jAFXVb/wtdqhlUkVwyltg1UoZTE0+gqhc6a0jZALZw7kfSkGP9Uj2CdgFxzVe4azLcUAjZmyMVhyoHvyAdSkVxLDWZGWrg+NviIYSDVaxiEzGGkJeaF7GkMufcBQI3iSJM3hTTbspaui1Ie+dmDLhbkkKQFHa5ipqMiFtjawVgSxJCkAzxxhHhvOqdSDRB4E5igDE1hK7a+A76fWU63AlTSdZcXWm3Pr1UnMTlvwUzOz1IdQlZKY83gGkg/vqb4ajxn4ACI5LVjYvZ59c+DmF1owzuRetrCxUdYt/0LdQ6J0AYnk+AZ30xTNDg99OQ1IMmm7Ct4nZ5s5JZtpD4dMLjC+rGE0MMY9FO1c/YSj5DaAwW7jeZvdx2kV7kqroG0LJpKz4KflugeOmVJr/O26yrj60JfUs49BcLR7ksLDfwFgOFtA4HwXKed3flIIqdGNkLrkxf6H2LtWczfg+yAtZMvbPgiCeD5r6rfrH+csgwqLqbWWAAAAAElFTkSuQmCC"), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURUdwTObn8Ozt9tUSDygAAAACdFJOUwBa/S110gAAAIhJREFUWMPt1jkOgDAMBVEz9z80HRKKWJxJACH/3q+I4iXiOGyJnrCLLM8T4ARwAjgBpGABkMLrAEihgAKGAD9opg9MJA/oqez3ggf0avOA3s6tEI8DMbbeA/oNc8Iy60AZMFMvCW5Elp8RoARSsfWtAE4AJ4AUCihgyE/0veC7MUdMm4k9R9YKR5IQIqaJ41sAAAAASUVORK5CYII=");
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURUdwTObn8Ozt9tUSDygAAAACdFJOUwBa/S110gAAAIhJREFUWMPt1jkOgDAMBVEz9z80HRKKWJxJACH/3q+I4iXiOGyJnrCLLM8T4ARwAjgBpGABkMLrAEihgAKGAD9opg9MJA/oqez3ggf0avOA3s6tEI8DMbbeA/oNc8Iy60AZMFMvCW5Elp8RoARSsfWtAE4AJ4AUCihgyE/0veC7MUdMm4k9R9YKR5IQIqaJ41sAAAAASUVORK5CYII=");
 }
 
 .sheet-rolltemplate-npcdmg,
@@ -5005,7 +5003,7 @@ div.clear + strong {
     background-position-x: 3px, calc(100% - 3px) !important;
     background-position-y: 3px, 3px !important;
     background-size: 20px !important;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAC3UExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9lRJuQIAAAA8dFJOUwAGGBAh9+jnIHC0wN/0dbPMDKHQEvsUhRoe/tWCWQMku08JebVpJUuU2z9+MraZXVHvZcbsZ+Qti6c9VjwUwqYAAAHySURBVDjLlZXreoIwDIYryBBQ1CmoDkCY25SdnDp3yv1f15pC2yD4PFv+IPUl6fclBcb+FR31ax47kedFTjxv4269XFxNfwIqJn63wQFE/BJeD6AWy2fjnAO4ZQ8BNCJ4rIGC+JbgtoaupoR8wpKDpwj/eFsl+8MbIW8oaYyQHG/geJeHK4ONs9EFMl8DwGi8y5nRhz46syHVNbefmDNBIgeecDXWpFIUBjy/Y/FnNcfYl9YuXcJsQVFw8ghwkF1KrhT5XK6YVnlT2HzncFL9cLTz5ZqPv605M7aQ8RtbkmUCEb5YEP2doY5Th+UAdq8ib3TfxYNo9zFHHeDnuavJFy0cHStEwjnnDieAq3QIsvqnBuNqz1aSLbkvXS7HvlekLg2OBLnB6J8gU7ckx6TlUQVeo2+YpCfItdhnRkbDI2AZPZWzR8FVA6yq4z4Xd809EpBpRYREMD0DiaLFuwSLyvAaSBXtieHMFfY0SaHoXbcQR3T5USfPFZVDMbUANqyFVIosUw2uFbaRUtFMHoV+MyVV9KqyPOCxbifJ1FWTx48gu6SIvK2+LpJCUarWpt5FsrslJ7uqft+2z0AZLhX1YbBLWkiMBV0MZxZss6RZvZoeEtPYtezPXa2faeRydth4nZup4/g/P2btU5A6686fPxy/z0GPYx/Whm4AAAAASUVORK5CYII="), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJUExURUdwTObn8Ozt9tUSDygAAAACdFJOUwBa/S110gAAAIhJREFUWMPt1jkOgDAMBVEz9z80HRKKWJxJACH/3q+I4iXiOGyJnrCLLM8T4ARwAjgBpGABkMLrAEihgAKGAD9opg9MJA/oqez3ggf0avOA3s6tEI8DMbbeA/oNc8Iy60AZMFMvCW5Elp8RoARSsfWtAE4AJ4AUCihgyE/0veC7MUdMm4k9R9YKR5IQIqaJ41sAAAAASUVORK5CYII=");
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAC3UExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9lRJuQIAAAA8dFJOUwAGGBAh9+jnIHC0wN/0dbPMDKHQEvsUhRoe/tWCWQMku08JebVpJUuU2z9+MraZXVHvZcbsZ+Qti6c9VjwUwqYAAAHySURBVDjLlZXreoIwDIYryBBQ1CmoDkCY25SdnDp3yv1f15pC2yD4PFv+IPUl6fclBcb+FR31ax47kedFTjxv4269XFxNfwIqJn63wQFE/BJeD6AWy2fjnAO4ZQ8BNCJ4rIGC+JbgtoaupoR8wpKDpwj/eFsl+8MbIW8oaYyQHG/geJeHK4ONs9EFMl8DwGi8y5nRhz46syHVNbefmDNBIgeecDXWpFIUBjy/Y/FnNcfYl9YuXcJsQVFw8ghwkF1KrhT5XK6YVnlT2HzncFL9cLTz5ZqPv605M7aQ8RtbkmUCEb5YEP2doY5Th+UAdq8ib3TfxYNo9zFHHeDnuavJFy0cHStEwjnnDieAq3QIsvqnBuNqz1aSLbkvXS7HvlekLg2OBLnB6J8gU7ckx6TlUQVeo2+YpCfItdhnRkbDI2AZPZWzR8FVA6yq4z4Xd809EpBpRYREMD0DiaLFuwSLyvAaSBXtieHMFfY0SaHoXbcQR3T5USfPFZVDMbUANqyFVIosUw2uFbaRUtFMHoV+MyVV9KqyPOCxbifJ1FWTx48gu6SIvK2+LpJCUarWpt5FsrslJ7uqft+2z0AZLhX1YbBLWkiMBV0MZxZss6RZvZoeEtPYtezPXa2faeRydth4nZup4/g/P2btU5A6686fPxy/z0GPYx/Whm4AAAAASUVORK5CYII=");
 }
 
 .sheet-grey span {
