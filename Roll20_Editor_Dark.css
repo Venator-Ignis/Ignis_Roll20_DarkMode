@@ -1,7 +1,7 @@
 @-moz-document domain("app.roll20.net") {
 /* ==UserStyle==
 @name         Venator_Ignis Roll20 Dark
-@version      1.0.85
+@version      1.0.95
 @author       Venator_Ignis
 ==/UserStyle== */
 }
@@ -37,10 +37,10 @@
     --font-mono: "Ubuntu Mono", monospace;
     --version: "Venator_Ignis Roll20 Dark Mode";
     --anim-numbers: fadein cubic-bezier(0.8, 0, 0.9, 1) 0.7s;
-    --anim-attack: slide-in-blurred-right 0.6s;
+    --anim-attack: slide-in-blurred-right 0.3s;
     --anim-damage: slide-in-blurred-top 0.5s;
     --anim-traits: bounceInLeft 1s;
-    --anim-crit: text-flicker-in-glow 2s linear 1s both;
+    --anim-crit: text-flicker-in-glow 1.5s linear 0.5s both;
     --anim-spell: jackInTheBox 1s;
     --anim-simple: flipInY 1s;
     --anim-sheet: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -3208,6 +3208,8 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     text-shadow: 0px 0px 10px var(--color-bg-light), 0px 0px 5px var(--color-bg-light) !important;
     box-shadow: 0px 0px 5px var(--color-text-disabled) !important;
     border-radius: 0px;
+    padding: 5px;
+    font-size: 15px;
 }
 
 #macrobar .macrobox:nth-of-type(1) .btn {
@@ -8027,5 +8029,222 @@ caption {
 
 .booktemplate.list li.header-tiny {
     width: calc(10% - 5px) !important;
+}
+}
+
+@-moz-document domain("app.roll20.net") {
+/*Radial Menu*/
+#radial-menu .markermenu.open {
+    width: 410px !important;
+}
+
+#radial-menu .markermenu.open {
+    top: 66px !important;
+    background-color: rgba(55, 58, 82, 0.9);
+    color: White;
+}
+
+#radial-menu .markermenu .markericon {
+    width: 95px !important;
+    padding-left: 28px !important;
+    font-size: 1em !important;
+}
+
+#radial-menu .markermenu .markercolor {
+    width: 60px !important;
+    padding-left: 28px !important;
+    font-size: 1em !important;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+#radial-menu .markermenu .markercolor.dead {
+    background-color: #CC1010 !important;
+    color: #000 !important;
+    top: 0px !important;
+    border-radius: 20px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+div[data-action-type=toggle_status_dead]::after {
+    content: " Dead" !important;
+}
+
+div[data-action-type=toggle_status_blue]::after {
+    content: "Blue" !important;
+}
+div[data-action-type=toggle_status_red]::after {
+    content: "Peter" !important;
+}
+div[data-action-type=toggle_status_green]::after {
+    content: "Green" !important;
+}
+div[data-action-type=toggle_status_brown]::after {
+    content: "Brown" !important;
+}
+div[data-action-type=toggle_status_purple]::after {
+    content: "Purple" !important;
+}
+div[data-action-type=toggle_status_pink]::after {
+    content: "Pink" !important;
+}
+div[data-action-type=toggle_status_yellow]::after {
+    content: "Yellow" !important;
+}
+div[data-action-type=toggle_status_skull]::after {
+    content: "Unconscious" !important;
+}
+div[data-action-type=toggle_status_sleepy]::after {
+    content: "Sleeping" !important;
+}
+div[data-action-type=toggle_status_half-heart]::after {
+    content: "< 50% HP" !important;
+}
+div[data-action-type=toggle_status_interdiction]::after {
+    content: "Incapacitated" !important;
+}
+div[data-action-type=toggle_status_snail]::after {
+    content: "Slow" !important;
+}
+div[data-action-type=toggle_status_lightning-helix]::after {
+    content: "Stunned" !important;
+}
+div[data-action-type=toggle_status_chained-heart]::after {
+    content: "Charmed" !important;
+}
+div[data-action-type=toggle_status_chemical-bolt]::after {
+    content: "Deafened" !important;
+}
+div[data-action-type=toggle_status_death-zone]::after {
+    content: "Area" !important;
+}
+div[data-action-type=toggle_status_drink-me]::after {
+    content: "Poisoned" !important;
+}
+div[data-action-type=toggle_status_ninja-mask]::after {
+    content: "Invisible" !important;
+}
+div[data-action-type=toggle_status_stopwatch]::after {
+    content: "Consentrating" !important;
+}
+div[data-action-type=toggle_status_fishing-net]::after {
+    content: "Captured" !important;
+}
+div[data-action-type=toggle_status_overdrive]::after {
+    content: "Effect" !important;
+}
+div[data-action-type=toggle_status_strong]::after {
+    content: "Buffed A" !important;
+}
+div[data-action-type=toggle_status_fist]::after {
+    content: "Buffed B" !important;
+}
+div[data-action-type=toggle_status_padlock]::after {
+    content: "Restrained" !important;
+}
+div[data-action-type=toggle_status_three-leaves]::after {
+    content: "Disguised" !important;
+}
+div[data-action-type=toggle_status_fluffy-wing]::after {
+    content: "Fly/Hover" !important;
+}
+div[data-action-type=toggle_status_pummeled]::after {
+    content: "Blindsight" !important;
+}
+div[data-action-type=toggle_status_tread]::after {
+    content: "Fast" !important;
+}
+div[data-action-type=toggle_status_aura]::after {
+    content: "Aura" !important;
+}
+div[data-action-type=toggle_status_back-pain]::after {
+    content: "Prone" !important;
+}
+div[data-action-type=toggle_status_bleeding-eye]::after {
+    content: "Blinded" !important;
+}
+div[data-action-type=toggle_status_broken-heart]::after {
+    content: "Vulnerable" !important;
+}
+div[data-action-type=toggle_status_cobweb]::after {
+    content: "No move" !important;
+}
+div[data-action-type=toggle_status_bolt-shield]::after {
+    content: "Def Up" !important;
+}
+div[data-action-type=toggle_status_broken-shield]::after {
+    content: "Def Down" !important;
+}
+div[data-action-type=toggle_status_radioactive]::after {
+    content: "Diseased" !important;
+}
+div[data-action-type=toggle_status_trophy]::after {
+    content: "VIP" !important;
+}
+div[data-action-type=toggle_status_frozen-orb]::after {
+    content: "Petrified" !important;
+}
+div[data-action-type=toggle_status_grab]::after {
+    content: "Grappled" !important;
+}
+div[data-action-type=toggle_status_screaming]::after {
+    content: "Frightened" !important;
+}
+div[data-action-type=toggle_status_sentry-gun]::after {
+    content: "Summon" !important;
+}
+div[data-action-type=toggle_status_archery-target]::after {
+    content: "Marked" !important;
+}
+
+/* Following icons are disabled */
+div[data-action-type=toggle_status_grenade] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_spanner] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_black-flag] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_all-for-one] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_rolling-bomb] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_white-tower] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_edge-crack] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_broken-skull] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_flying-flag] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_arrowed] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_half-haze] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_angel-outfit] {
+    display: none !important;
 }
 }
