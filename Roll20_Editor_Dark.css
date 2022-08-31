@@ -1,13 +1,16 @@
 @-moz-document domain("app.roll20.net") {
 /* ==UserStyle==
-@name         Venator_Ignis Roll20 Dark
-@version      1.0.95
-@author       Venator_Ignis
+@name           Venator_Ignis Roll20 Dark Mode
+@namespace      github.com/openstyles/stylus
+@version        1.1.1
+@description    Venator_Ignis's version of Roll20 Dark Mode
+@author         Venator_Ignis
 ==/UserStyle== */
 }
 
 @-moz-document url-prefix("https://app.roll20.net/") {
-/* Loading Screen */
+/* Variables */
+
 :root {
     --color-bg-light: #242533;
     --color-bg-light-rgba: rgb(36, 37, 51, 0.95);
@@ -45,8 +48,10 @@
     --anim-simple: flipInY 1s;
     --anim-sheet: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+}
 
-/* ---------------------------------- Animation ----------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/") {
+/* Animations */
 @keyframes fadein {
     from {
         opacity: 0;
@@ -566,8 +571,10 @@
         opacity: 1;
     }
 }
+}
 
-/* ---------------------------------- Fonts --------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/") {
+/* Page Fonts */
 /* Ruda */
 /* cyrillic */
 @font-face {
@@ -1448,8 +1455,6 @@
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
-/* ELEMENTS */
-
 /* Scrollbar */
 #editor-wrapper::-webkit-scrollbar,
 #rightsidebar .ui-tabs-panel::-webkit-scrollbar,
@@ -1473,7 +1478,9 @@ textarea::-webkit-scrollbar-corner {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Buttons */
 .btn,
 .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button {
@@ -1522,7 +1529,9 @@ button.btn-primary:focus {
     background-color: var(--color-red);
     box-shadow: 0 0 5px var(--color-red);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Checkbox */
 input[type="checkbox"] {
     position: relative;
@@ -1570,7 +1579,9 @@ input[type="checkbox"]:checked:after {
     top: 0px;
     left: 3.5px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Slider selector */
 input:checked + .slider {
     background-color: var(--color-button-hover) !important;
@@ -1616,7 +1627,9 @@ input:checked + .slider {
     width: 12px;
     height: 12px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Select */
 select {
     font-family: var(--font-primary);
@@ -1642,7 +1655,9 @@ select[disabled] {
     border: 1px solid var(--color-red);
     color: var(--color-red);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Input Text */
 input[type="text"],
 .selectize-input,
@@ -1839,7 +1854,9 @@ textarea::placeholder {
 .ui-widget-content a {
     color: var(--color-yellow);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Notepad */
 .note-editor.note-frame {
     border: 0px;
@@ -1990,23 +2007,10 @@ fieldset[disabled] .btn-primary.focus {
 .note-editor.note-frame .note-editing-area {
     width: calc(100% + 5px);
 }
-
-/* Tooltip */
-.tipsy-inner {
-    color: var(--color-text-primary);
-    font-family: var(--font-number);
-    background-color: var(--color-bg-medium);
-    box-shadow: 0px 0px 5px var(--color-text-disabled), 0px 0px 3px var(--color-text-disabled);
-    border-radius: 5px;
-    max-width: 250px;
-    font-weight: 300;
 }
 
-.tipsy-arrow {
-    display: none;
-}
-
-/* ---------------------------------- Typo ---------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Typo */
 h1,
 h2,
 h3 {
@@ -2077,8 +2081,10 @@ blockquote {
 blockquote p {
     margin: 0px;
 }
+}
 
-/* ------------------------------- UI dialogs ------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* UI dialogs */
 .ui-dialog {
     font-family: var(--font-secondary);
     background: var(--color-bg-light) !important;
@@ -2315,8 +2321,10 @@ a.lightly .mag-glass {
     color: var(--yellow) !important;
     text-shadow: 0 0 5px var(--color-bg-dark), 0 0 5px var(--color-bg-dark);
 }
+}
 
-/* ------------------------------ Context Menu ------------------------------ */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Context Menu */
 .d20contextmenu > ul,
 div#color_selector,
 .d20contextmenu ul li ul.submenu {
@@ -2368,8 +2376,10 @@ div#color_custom label {
 .d20contextmenu li[data-action-type="deletefolderpropagate"] {
     background-color: var(--color-bg-light) !important;
 }
+}
 
-/* ------------------------------ Modal ------------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Modal */
 .modal-content {
     background-color: var(--color-bg-light);
     box-shadow: 0px 0px 3px var(--color-text-disabled);
@@ -2395,10 +2405,10 @@ div#color_custom label {
     opacity: 1;
     text-shadow: 0px 0px 5px;
 }
+}
 
-/* -------------------------------------------------------------------------- */
-/*                                   Editor                                   */
-/* -------------------------------------------------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Editor */
 body {
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIBAMAAABfdrOtAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAASUExURSkqOjM1TCssPTEzSC8wRC0uQLr1700AAAXYSURBVHja7ZtNd6IwFIYfI9kbgX0Y7R5E91DsHsbx//+VWRQUIHxF65lpuYu2p8S8yU2A3Oe8AgBOUv5WHoDMxYZmBEq58fH8J1I+AHCiHTIEEJRtEoLm5bLPtVLlZ7dtEff65xzHSim/FOgTWeUrlUgNtETY3Mar3BzAb3WwCgGgUD7gDYjIxFE6SAwi5Sei+Pdbprwc2REpE0rqA7+BQ48ICJcdBpEYAMcHkJnyoraIEyIAcLzm5FsiMiwnahApAEh12TpS7TVhSxCCOBE1h90SEdtaJlsiKw04955VZ5wZMgGiKnFB3hERG0DXRC7N6+u8NhGgSNo9rDQAAmdTinZjS15b4RPnTsrrE6nr1VogqTIutwaRM+5dRPjt+0BsIL0nQHimYcJqA6SN3dac7Z77/tdOu41fbq3PnztDFxkg8qp/U7Zu97SP1N0lgfQjygGcAyBi4zCrxG3KTWQeCOATJKaMrlQtQ7vQ0IETCg/YazxYJ0aRzzzgswMRddZV1O4M40TAJ/tclrQnW0DhV2si0kPf5f6JVDcsOatQbntESA+lyMWggVDJ8ETuz7OVUgm9KgnChcvJnM/Iy4cmAsGhelb7vRqIKN+pfOf1Xb+oo4Z973UKNz6er9fI1f0iSKWUGmghLiqOjwM9vP3J4lgNtQBkFp8GW4jrb5ZYYokllpgUIos/vlpDxh/XS/8b5i0bfqoDQHweHKeIcmDt9b7m3FgNdSAuSsWcs6H3nIjeIdNczO/bnVIhMh2QSU+/rleAaOB9ewAyXf7RGUL8pnJA9vYQ3D5WqL6TQ3GqH0K6EwlZ5SIH9uYjkrgnoFCuWcPx6onrngePsA6lD2CoVoBVIquxxdrchHu/AtadwQYhOBuurHW3WgYgI6hq9+3tNN7avS7sc0SkCbYI1Z6IR3nwXm2ELkwd3JWDpFtQl2c4KEI4g9C1E2btc+ABaGe7zk3ZahS+hXH7NbrdtWrVsk6KAeDdlIwMIAJwtsDKtCgqcvPaubC1T8vioagXYq18bgE+brM2jUP47G7bTkYHmufwCwDc9kz3gL1OWpjAcDfJEAoPiDQiOrRzeqryvqenGi7/I258ozCLkPqQaZGe2qV/hZHWm5K6FH134npbbWRDMStDgOh0K5CC5lUB8EtuRc65XlI2anIAjWrWrV3mo9w4cjUcmyJOUgDE0gVSvaezh9eb253s9m6OEp6slVI5CL8tsgP4kCoBSZA47QfgqlxnkTKZw+m2yHTWhy2Hm8P6sOZwM1gf1hzOn876sOZwM1ifPYebwfrGOBy9HG4G67PncDNYnz2Hm8P6rDncHNZnz+Eq1ifHWR/OpidbYxxuBuvDmsNNYn0+sMeew01nfZ8czrficJNZ3yMcbgbre4DDTWZ9j3G4Sazvgwc53CTW94TCdWF9SyyxxBJPYn1v2enLWd80DjfC+uQw65vI4cZY32GI9c3gcNasbw6Hs2Z9Ip7O4WxZH0Fy53BihMO5E1ifNrC+ORxujPXRw/pmcThb1jeLw1myvlkczpb1zeJwtqzvzuGccQ5ny/rmcDhb1tfkcEcjh6vSoyexvkuX9c3icLasbxaHs2V9X+O506OeO7+Xwy2eu2/tuQt7OdziuXuh5247kcM9y3N3HOJw1qxvBof7Pp47bc/6fqbnTj3suYsWz90SSyyxxP/D4Z4SMj59uedOvsRzd/genrvLP+C5i5/sudMjnjvxoOeuj8OJIz/QcycXz12V9x/gubuxvld47uTiufsKz13eBUs2nrvTEIdbG+jVjfX9+lGeu3yQw8Hiuft/PXfhAOt7iedOf73nznmh5274u68e1p47zaMc7p/z3KnHPXf+MOub5Lk7Psj6nlC4LqxviSWWWOJJrG8ahxtlfeOeu9MYh3uG5y561HP3Pua5S3iB5y551HN3eYXnzh9kfbM4XK/n7l4/GL9f+x957tzFc9fhcFNZ3/s38Nydxz13IxzOlvU913MXPey5w8Jz9xfo55TXm8iA4gAAAABJRU5ErkJggg==");
 }
@@ -2426,7 +2436,10 @@ body {
     color: var(--color-yellow);
 }
 
-/* ------------------------------ Decks ------------------------------------- */
+}
+
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Decks  */
 #showndecks {
     min-width: 140px;
 }
@@ -2460,8 +2473,10 @@ div#showndecks:hover {
     background-color: var(--color-floating-bar-bg);
     box-shadow: 0px 0px 3px var(--color-text-disabled), 0px 0px 3px var(--color-text-disabled);
 }
+}
 
-/* ------------------------------ Turn Order -------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Turn Order */
 #initiativewindow {
     width: calc(100% - 5px) !important;
 }
@@ -2528,252 +2543,228 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     left: 5px;
     padding: 0px;
 }
-
-/* ------------------------------ Radial Menu ------------------------------- */
-/*
-    #radial-menu .button {
-        background: var(--color-element-bg) !important;
-        border: 0px;
-    }
-    #radial-menu .button.button-1 {
-        border-radius: 0px 0px 25px 25px;
-    }
-    #radial-menu .button.button-2 {
-        border-radius: 25px 25px 0px 0px;
-    }
-    #radial-menu .button.button-1,
-    #radial-menu .button.button-2 {
-        box-shadow: 0px 0px 5px var(--color-text-disabled);
-        left: 95px;
-    }
-    #radial-menu .button.button-2 {
-        top: -5px;
-    }
-    #radial-menu .button.button-1 {
-        top: 33px;
-    }
-    #radial-menu .button.button-3,
-    #radial-menu .button.button-4,
-    #radial-menu .button.button-5 {
-        left: -60px;
-    }
-    #radial-menu .button.button-3 {
-        box-shadow: 0px 0px 5px var(--color-text-disabled),
-            inset 0px 0px 5px var(--color-green),
-            inset 0px 0px 10px var(--color-green),
-            inset 0px 0px 15px var(--color-green) !important;
-        top: 15px;
-    }
-    #radial-menu .button.button-4 {
-        box-shadow: 0px 0px 5px var(--color-text-disabled),
-            inset 0px 0px 5px var(--color-blue),
-            inset 0px 0px 10px var(--color-blue),
-            inset 0px 0px 15px var(--color-blue) !important;
-        top: 60px;
-    }
-    #radial-menu .button.button-5 {
-        box-shadow: 0px 0px 5px var(--color-text-disabled),
-            inset 0px 0px 5px var(--color-red),
-            inset 0px 0px 10px var(--color-red),
-            inset 0px 0px 15px var(--color-red) !important;
-        top: -30px;
-    }
-    #radial-menu .button div.inner {
-        background: none;
-        color: var(--color-text-primary);
-        font-family: var(--font-number);
-        font-weight: 800;
-        margin-top: 5px;
-        text-shadow: 0px 0px 5px var(--color-bg-dark),
-            0px 0px 2px var(--color-bg-dark), 0px 0px 2px var(--color-bg-dark);
-    }
-    #radial-menu .button.button-1 div.inner,
-    #radial-menu .button.button-2 div.inner {
-        margin-top: 2px;
-    }
-    #radial-menu .button div.inner span {
-        font-size: 24px !important;
-    }
-    #radial-menu .markermenu {
-        background: var(--color-element-bg) !important;
-        box-shadow: 0px 0px 5px var(--color-text-disabled);
-    }
-    #radial-menu .markermenu .markercolor,
-    #radial-menu .markermenu .markericon {
-        border: 5px;
-    }
-    #radial-menu .markermenu.open {
-        width: 230px;
-        height: 225px;
-        border-radius: 15px;
-    }
-    #radial-menu .markermenu .markericon.active,
-    #radial-menu .markermenu .markercolor.active {
-        outline: 2px dashed var(--color-yellow);
-        outline-offset: -2px;
-        border: 0px;
-        background-color: var(--color-yellow);
-        border-radius: 5px;
-    }
-    #radial-menu .markermenu .markercolor.dead {
-        color: var(--color-red);
-        top: -2px;
-    }
-	*/
-/*#radial-menu {
-    --color-text-primary: #fff;
-    --color-bg-dark: #1c1d28;
-    --color-text-disabled: #888994;
-    --color-element-bg: #eaeaea;
-    --color-red: #f85212;
-    --color-green: #78ff10;
-    --color-blue: #0c6be7;
-    --color-yellow: #fc0;
-    --font-number: "Ruda", sans-serif;
-}
-#radial-menu .button {
-    background: var(--color-element-bg) !important;
-    border: 0px;
-}
-#radial-menu .button.button-1 {
-    border-radius: 0px 0px 25px 25px;
-}
-#radial-menu .button.button-2 {
-    border-radius: 25px 25px 0px 0px;
-}
-#radial-menu .button.button-1,
-#radial-menu .button.button-2 {
-    box-shadow: 0px 0px 5px var(--color-text-disabled);
-    top: 150px !important;
-    left: -60px;
-}
-#radial-menu .button.button-2 {
-    top: 111px !important;
-}
-#radial-menu .button.button-1 {
-    top: 33px;
-}
-#radial-menu .button.button-3,
-#radial-menu .button.button-4,
-#radial-menu .button.button-5 {
-    left: -60px;
-}
-#radial-menu .button.button-3 {
-    box-shadow: 0px 0px 5px var(--color-text-disabled),
-    inset 0px 0px 5px var(--color-green),
-    inset 0px 0px 10px var(--color-green),
-    inset 0px 0px 15px var(--color-green) !important;
-    top: 15px;
-}
-#radial-menu .button.button-4 {
-    box-shadow: 0px 0px 5px var(--color-text-disabled),
-    inset 0px 0px 5px var(--color-blue),
-    inset 0px 0px 10px var(--color-blue),
-    inset 0px 0px 15px var(--color-blue) !important;
-    top: 60px;
-	z-index: 1;
-}
-#radial-menu .button.button-5 {
-    box-shadow: 0px 0px 5px var(--color-text-disabled),
-    inset 0px 0px 5px var(--color-red),
-    inset 0px 0px 10px var(--color-red),
-    inset 0px 0px 15px var(--color-red) !important;
-    top: -30px;
-	z-index: 1;
-}
-#radial-menu .button.button-1 div.inner,
-#radial-menu .button.button-2 div.inner {
-    margin-top: 2px;
-}
-#radial-menu .button div.inner span {
-    font-size: 24px;
-}
-#radial-menu .markermenu {
-    background: var(--color-element-bg) !important;
-    box-shadow: 0px 0px 5px var(--color-text-disabled);
-}
-#radial-menu .markermenu .markercolor,
-#radial-menu .markermenu .markericon {
-    border: 5px;
 }
 
-#radial-menu .popupvalue {
-    position: absolute;
-    top: 5px;
-    left: 45px;
-    width: 55px;
-    height: 30px;
-    z-index: 1005
-}
-#radial-menu .popupvalue input {
-    width: 100%;
-    font-size: 16px
-}
-#radial-menu {
-    position: fixed;
-    top: 380px !important;
-    left: 80px !important;
-}
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/*Radial Menu*/
+
 #radial-menu .markermenu.open {
-    width: 268px;
-    height: 265px;
-    border-radius: 15px;
-}
-#radial-menu .markermenu .markercolor,
-#radial-menu .markermenu .markericon {
-    border: 5px;
-}
-#radial-menu .markermenu .markericon.active,
-#radial-menu .markermenu .markercolor.active {
-    outline: 2px dashed var(--color-yellow);
-    outline-offset: -2px;
-    border: 0px;
-    background-color: var(--color-yellow);
-    border-radius: 5px;
-}
-#radial-menu .markermenu .markercolor.dead {
-    top: -2px;
-}
-	
-#radial-menu .button.button-1:after {
-    position: relative;
-    content: "👟";
-    font-size: 24px;
-	z-index: 9999 !important;
-    top: -138px;
-    left: -19px;
-    border-radius: 25px 25px 25px 25px;
-    padding: 3px;
-    text-shadow: 0px 0px 2px #000, 0px 0px 5px #000;
-	color: white;
-}
-#radial-menu .button.button-2:after {
-    position: relative;
-    content: "❤️";
-    font-size: 24px;
-	z-index: -1 !important;
-    top: -138px;
-    left: -19px;
-    border-radius: 25px 25px 25px 25px;
-    padding: 3px;
-    text-shadow: 0px 0px 2px #000, 0px 0px 5px #000;
-	color: white;
-}
-#radial-menu .button.button-3:after {
-    position: relative;
-    content: "🛡️";
-    font-size: 24px;
-	z-index: 9999 !important;
-    top: -90px;
-    left: -15px;
-    border-radius: 25px 25px 25px 25px;
-    padding: 3px;
-    text-shadow: 0px 0px 2px #000, 0px 0px 5px #000;
-	color: white;
+    width: 410px !important;
 }
 
-	*/
-/* ------------------------------ Flotating Bar ----------------------------- */
+#radial-menu .markermenu.open {
+    top: 66px !important;
+    background-color: rgba(55, 58, 82, 0.9);
+    color: White;
+}
+
+#radial-menu .markermenu .markericon {
+    width: 95px !important;
+    padding-left: 28px !important;
+    font-size: 1em !important;
+}
+
+#radial-menu .markermenu .markercolor {
+    width: 60px !important;
+    padding-left: 28px !important;
+    font-size: 1em !important;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+#radial-menu .markermenu .markercolor.dead {
+    background-color: #CC1010 !important;
+    color: #000 !important;
+    top: 0px !important;
+    border-radius: 20px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 5px;
+}
+
+div[data-action-type=toggle_status_dead]::after {
+    content: " Dead" !important;
+}
+
+div[data-action-type=toggle_status_blue]::after {
+    content: "Blue" !important;
+}
+div[data-action-type=toggle_status_red]::after {
+    content: "Peter" !important;
+}
+div[data-action-type=toggle_status_green]::after {
+    content: "Green" !important;
+}
+div[data-action-type=toggle_status_brown]::after {
+    content: "Brown" !important;
+}
+div[data-action-type=toggle_status_purple]::after {
+    content: "Purple" !important;
+}
+div[data-action-type=toggle_status_pink]::after {
+    content: "Pink" !important;
+}
+div[data-action-type=toggle_status_yellow]::after {
+    content: "Yellow" !important;
+}
+div[data-action-type=toggle_status_skull]::after {
+    content: "Unconscious" !important;
+}
+div[data-action-type=toggle_status_sleepy]::after {
+    content: "Sleeping" !important;
+}
+div[data-action-type=toggle_status_half-heart]::after {
+    content: "< 50% HP" !important;
+}
+div[data-action-type=toggle_status_interdiction]::after {
+    content: "Incapacitated" !important;
+}
+div[data-action-type=toggle_status_snail]::after {
+    content: "Slow" !important;
+}
+div[data-action-type=toggle_status_lightning-helix]::after {
+    content: "Stunned" !important;
+}
+div[data-action-type=toggle_status_chained-heart]::after {
+    content: "Charmed" !important;
+}
+div[data-action-type=toggle_status_chemical-bolt]::after {
+    content: "Deafened" !important;
+}
+div[data-action-type=toggle_status_death-zone]::after {
+    content: "Area" !important;
+}
+div[data-action-type=toggle_status_drink-me]::after {
+    content: "Poisoned" !important;
+}
+div[data-action-type=toggle_status_ninja-mask]::after {
+    content: "Invisible" !important;
+}
+div[data-action-type=toggle_status_stopwatch]::after {
+    content: "Consentrating" !important;
+}
+div[data-action-type=toggle_status_fishing-net]::after {
+    content: "Captured" !important;
+}
+div[data-action-type=toggle_status_overdrive]::after {
+    content: "Effect" !important;
+}
+div[data-action-type=toggle_status_strong]::after {
+    content: "Buffed A" !important;
+}
+div[data-action-type=toggle_status_fist]::after {
+    content: "Buffed B" !important;
+}
+div[data-action-type=toggle_status_padlock]::after {
+    content: "Restrained" !important;
+}
+div[data-action-type=toggle_status_three-leaves]::after {
+    content: "Disguised" !important;
+}
+div[data-action-type=toggle_status_fluffy-wing]::after {
+    content: "Fly/Hover" !important;
+}
+div[data-action-type=toggle_status_pummeled]::after {
+    content: "Blindsight" !important;
+}
+div[data-action-type=toggle_status_tread]::after {
+    content: "Fast" !important;
+}
+div[data-action-type=toggle_status_aura]::after {
+    content: "Aura" !important;
+}
+div[data-action-type=toggle_status_back-pain]::after {
+    content: "Prone" !important;
+}
+div[data-action-type=toggle_status_bleeding-eye]::after {
+    content: "Blinded" !important;
+}
+div[data-action-type=toggle_status_broken-heart]::after {
+    content: "Vulnerable" !important;
+}
+div[data-action-type=toggle_status_cobweb]::after {
+    content: "No move" !important;
+}
+div[data-action-type=toggle_status_bolt-shield]::after {
+    content: "Def Up" !important;
+}
+div[data-action-type=toggle_status_broken-shield]::after {
+    content: "Def Down" !important;
+}
+div[data-action-type=toggle_status_radioactive]::after {
+    content: "Diseased" !important;
+}
+div[data-action-type=toggle_status_trophy]::after {
+    content: "VIP" !important;
+}
+div[data-action-type=toggle_status_frozen-orb]::after {
+    content: "Petrified" !important;
+}
+div[data-action-type=toggle_status_grab]::after {
+    content: "Grappled" !important;
+}
+div[data-action-type=toggle_status_screaming]::after {
+    content: "Frightened" !important;
+}
+div[data-action-type=toggle_status_sentry-gun]::after {
+    content: "Summon" !important;
+}
+div[data-action-type=toggle_status_archery-target]::after {
+    content: "Marked" !important;
+}
+
+/* Following icons are disabled */
+div[data-action-type=toggle_status_grenade] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_spanner] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_black-flag] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_all-for-one] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_rolling-bomb] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_white-tower] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_edge-crack] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_broken-skull] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_flying-flag] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_arrowed] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_half-haze] {
+    display: none !important;
+}
+
+div[data-action-type=toggle_status_angel-outfit] {
+    display: none !important;
+}
+}
+
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Flotating Bar */
 #floatingtoolbar,
 #floatingtoolbar div.submenu ul,
 #floatingtoolbar div.submenu ul.selZoom,
@@ -2929,8 +2920,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 #floatingtoolbar li#measure div.submenu li[mode="hide"] {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAzUlEQVRIx6WW2w6AIAxD1///aROjguu6S+DJwBHKWkGzRgNs0IAJD0x4gPjkbYD4bDUwjxkPxd99bf7pG/JSPlLp+/Dq8KMRvfE8X7j04lmf2pgQyKFEtGhWgQH/3+ZaHMU2twfJb3XzvLboN/7pEXlnU8T0wvXHLxXHV4yrHvT0r3+BtkS7s78sTZRPeZiEfHb4MF+ml/PQ5o3Dnn8eEe/8kds0DpQsyxoIXNcWoVMB+JbzOOQrPRXtr4uK9rGpaB+bij67aqcXefc34QIjaANcoErBQAAAAABJRU5ErkJggg==");
 }
+}
 
-/* -------------------------------- Secondary bar --------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Secondary bar */
 #secondary-toolbar {
     opacity: 1;
     border: 0px;
@@ -2956,8 +2949,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+}
 
-/* -------------------------------- Zoom bar -------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Zoom bar */
 #zoomclick {
     margin-right: 22px;
 }
@@ -3017,7 +3012,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     box-shadow: 0px 0px 5px var(--color-text-disabled);
 }
 
-/* ------------------------------ Page Toolbar ------------------------------ */
+}
+
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Page Toolbar */
 #page-toolbar {
     background-color: var(--color-floating-bar-bg);
     height: calc(100% - 100px);
@@ -3066,21 +3064,6 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     width: 370px;
 }
 
-/*#page-toolbar .pages .availablepage span {
-        font-size: 14px !important;
-        font-weight: 300 !important;
-        word-wrap: normal !important;
-        white-space: pre-wrap;
-        display: block !important;
-        height: 60px;
-        top: 130px;
-        left: -50px;
-        text-align: right !important;
-        align-content: center;
-        line-height: 1.2;
-        transform: rotate(-90deg);
-        width: 170px !important;
-    }*/
 #page-toolbar .pages .availablepage input {
     width: 80% !important;
     font-size: 14px !important;
@@ -3125,8 +3108,6 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 .fas.fa-times {
     color: var(--color-red)
 }
-
-/*new version*/
 
 #page-toolbar .pages .availablepage {
     text-align: left;
@@ -3187,8 +3168,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 .page-create-new-after {
     display: none;
 }
+}
 
-/* ------------------------------- Playerzone ------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Playerzone */
 #playerzone .player {
     box-shadow: 0px 0px 5px var(--color-text-disabled);
 }
@@ -3196,8 +3179,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 .player .playername {
     background-color: var(--color-floating-bar-bg);
 }
+}
 
-/* -------------------------------- Macro box ------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Macro box */
 #macrobar {
     margin: 10px;
     max-width: 96%;
@@ -3237,11 +3222,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     background: none;
     padding-left: 5px;
 }
+}
 
-/* -------------------------------------------------------------------------- */
-/*                                   Sidebar                                  */
-/* -------------------------------------------------------------------------- */
-/* ---------------------------------- Main ---------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Sidebar Main */
 #rightsidebar,
 #rightsidebar .ui-widget-content {
     background-color: var(--color-bg-light);
@@ -3269,7 +3253,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     color: var(--color-yellow) !important;
 }
 
-/* -------------------------------- Tab Menu -------------------------------- */
+}
+
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Tab Menu */
 #rightsidebar ul.tabmenu {
     width: inherit !important;
     right: auto;
@@ -3362,8 +3349,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     -webkit-animation: none;
     animation: none;
 }
+}
 
-/* ----------------------------- Sidebar Control ---------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Sidebar Control */
 .fonticon-menu:before {
     font-family: var(--font-primary);
     color: var(--color-text-primary);
@@ -3401,7 +3390,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     box-shadow: 0px 0px 5px var(--color-button-main);
 }
 
-/* -------------------------------- Settings -------------------------------- */
+}
+
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Sidebar Settings */
 #rightsidebar h1,
 #rightsidebar h2,
 #rightsidebar h3 {
@@ -3502,8 +3494,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 .note-editor.note-frame {
     width: 75%;
 }
+}
 
-/* ------------------------------- Collection ------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Collection */
 #rightsidebar .table-striped > tbody > tr:nth-of-type(odd) {
     background-color: var(--color-bg-light);
 }
@@ -3556,8 +3550,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 #rightsidebar button.btn + h3 {
     display: block;
 }
+}
 
-/* --------------------------------- Player --------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Player */
 #rightsidebar #jukebox .primarycontrols .btn:active,
 #jukebox .secondarycontrols .btn:active {
     background-image: none;
@@ -3889,8 +3885,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
     border: 1px dashed var(--color-yellow) !important;
     color: var(--color-text-disabled);
 }
+}
 
-/* ------------------------------- Compendiaum ------------------------------ */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Compendiaum */
 #compendium div.searchbox span a {
     top: 2px !important;
 }
@@ -4014,8 +4012,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 .booktemplate .attributes span {
     color: var(--color-yellow);
 }
+}
 
-/* --------------------------------- Journal -------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Journal */
 #journal div.searchbox a.btn {
     padding: 5px 12px;
 }
@@ -4128,8 +4128,10 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 div.dropbox.filled:hover {
     border: 1px dashed var(--color-red);
 }
+}
 
-/* ------------------------------ Image Library ----------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Image Library */
 #imagedialog .searchbox {
     background-color: var(--color-bg-light);
     width: calc(100% - 20px);
@@ -4256,11 +4258,10 @@ div.dropbox.filled:hover {
 .tagset .textboxlist-bit-editable-input {
     background: var(--color-bg-medium);
 }
+}
 
-/* -------------------------------------------------------------------------- */
-/*                                    Chat                                    */
-/* -------------------------------------------------------------------------- */
-/* ------------------------------- Text Input ------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat Text Input */
 #textchat-input {
     padding: 10px 5px !important;
     /*box-shadow: 0 -3px 5px -3px var(--color-text-disabled);*/
@@ -4299,8 +4300,10 @@ div.dropbox.filled:hover {
 #rightsidebar #textchat {
     height: calc(100% - 145px) !important;
 }
+}
 
-/* -------------------------------- Messages -------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat Messages */
 .userscript-hacker-chat {
     margin-left: -5px;
     margin-bottom: -7px;
@@ -4318,14 +4321,18 @@ div.dropbox.filled:hover {
     padding: 10px;
     background-color: var(--color-bg-light);
 }
+}
 
-/* Emote */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat Emote */
 .textchatcontainer .emote {
     color: var(--color-text-primary);
     font-weight: 300;
 }
+}
 
-/* System */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat System */
 .textchatcontainer .message.system {
     color: var(--color-text-disabled);
     background-color: var(--color-bg-medium);
@@ -4335,19 +4342,25 @@ div.dropbox.filled:hover {
     background: none;
     opacity: 1;
 }
+}
 
-/* You */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat You */
 .textchatcontainer .message.you {
     background-color: var(--color-bg-dark) !important;
 }
+}
 
-/* Whisper */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat Whisper */
 .textchatcontainer .message.private {
     background-color: var(--color-bg-light);
     box-shadow: inset 0px 0px 8px var(--color-yellow);
 }
+}
 
-/* Other */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat Other */
 .textchatcontainer .inlinerollresult {
     background-color: var(--color-element-bg);
     border-radius: 5px;
@@ -4402,8 +4415,10 @@ div.dropbox.filled:hover {
     background-color: var(--color-button-main);
     color: var(--color-text-primary);
 }
+}
 
-/* Formula */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Chat Formula */
 .textchatcontainer .formula,
 .textchatcontainer .rolled {
     background: var(--color-element-bg);
@@ -4479,8 +4494,10 @@ div.clear + strong {
     background-position-x: right;
     background-size: 30px 30px;
 }
+}
 
-/* All */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* All Chat */
 .textchatcontainer .avatar {
     right: 10px;
     left: auto;
@@ -4518,7 +4535,9 @@ div.clear + strong {
 .textchatcontainer .message .spacer {
     display: none;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Rolls */
 .sheet-rolltemplate-simple .sheet-label,
 .sheet-rolltemplate-skill .sheet-label,
@@ -4643,29 +4662,6 @@ div.clear + strong {
     display: none;
 }
 
-/*
-    .sheet-rolltemplate-simple div.sheet-container:hover,
-    .sheet-rolltemplate-skill div.sheet-container:hover,
-    .sheet-rolltemplate-atk div.sheet-container:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-container.sheet-atk:hover,
-    .sheet-rolltemplate-dmg div.sheet-atk:hover,
-    .sheet-rolltemplate-dmg div.sheet-container:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-container.sheet-damagetemplate:hover,
-    .sheet-rolltemplate-atk div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-dmg div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-desc div.sheet-desc.sheet-info .sheet-middle:hover,
-    .sheet-rolltemplate-atk div.sheet-desc:hover,
-    .sheet-rolltemplate-atkdmg div.sheet-desc:hover,
-    .sheet-rolltemplate-dmg div.sheet-desc:hover,
-    .sheet-rolltemplate-desc div.sheet-desc:hover,
-    .sheet-rolltemplate-traits:hover,
-    .sheet-rolltemplate-npcaction div.sheet-container:hover,
-    .sheet-rolltemplate-npcatk:hover,
-    .sheet-rolltemplate-npcdmg:hover {
-        box-shadow: 0px 0px 10px var(--color-yellow);
-    }
-	*/
 .sheet-rolltemplate-default {
     border-radius: 5px;
     box-shadow: 0px 0px 5px var(--color-text-disabled);
@@ -5063,9 +5059,6 @@ div.clear + strong {
     display: none;
 }
 
-/*
-url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABOUExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9nvqL5kAAAAZdFJOUwAZ/OsSf/CmTgrTULZv5QHiP1Q+zCuaWJXib9kOAAAAv0lEQVQ4y6WUSw6DMAwFnQCElP+v7bv/RUsLLFKi+EnMeqSRFccid3g1M+VVgB0Jz5cAWkJ0ADBR4Q2jennGif0vjMxzYTw0zwykuIeBRvFqe4iFMnEHTjzDQM1M/GVV3/jC4hPhgCIRTorxMJDlXBgVGXbx5bpQ/s/8JMPy5sIifqHCAWsiHK5aIhxQnF6Xc6KtlS1vuLDIY/cGQ4qVein2/+V67VKY+HJFTgAXFmmpiQ+x9IQ4Wiq8MbtJ7vABh1QoG+cdBuUAAAAASUVORK5CYII=")	
-	*/
 .sheet-rolltemplate-simple div.sheet-container .sheet-result span[original-title*="[INIT]"],
 .sheet-rolltemplate-simple div.sheet-container .sheet-result span[title*="[INIT]"] {
     width: 100%;
@@ -5105,10 +5098,10 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
     text-shadow: 0px 0px 20px, 0px 0px 20px !important;
     animation: var(--anim-numbers);
 }
+}
 
-/* -------------------------------------------------------------------------- */
-/*                                5e Charsheet                                */
-/* -------------------------------------------------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* 5e Charsheet */
 #dialog-window.ui-dialog {
     border-radius: 0px !important;
 }
@@ -5133,21 +5126,9 @@ url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBT
 
 .charsheet .header span {
     color: var(--color-text-disabled);
+    font-size: 11px;;
 }
 
-/*.charsheet .options {
-		position: relative;
-		z-index: 1000;
-		width: 140%;
-		height: 140%;
-		left: -20%;
-		top: -20%;
-		transform: scale(1);
-		padding: 15px !important;
-		font-size: 1.3em;
-		outline: solid rgba(0, 0, 0, .6) 10000px;
-		box-shadow: 0px 0px 15px var(--color-yellow), 0px 0px 15px var(--color-text-disabled) !important;
-	}*/
 .attributesabilities .abil {
     background-color: var(--color-element-bg);
     border-radius: 5px;
@@ -5221,8 +5202,10 @@ button.rollabil.btn.dfontd20 {
     background-position: center center !important;
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1ODcuNDQgOTkuNTEiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMWMxZDI4O30uY2xzLTJ7ZmlsbDojMjQyNTMzO30uY2xzLTN7ZmlsbDojNWI0MGY1O30uY2xzLTQsLmNscy01e2ZpbGw6bm9uZTtzdHJva2U6IzM3M2E1MjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9LmNscy00e3N0cm9rZS13aWR0aDoxLjM4cHg7fS5jbHMtNXtzdHJva2Utd2lkdGg6MC43NXB4O30uY2xzLTZ7ZmlsbDojMjQyNTMzO308L3N0eWxlPjwvZGVmcz48dGl0bGU+U3BlbGxTY3JvbGw8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjMzNy43OCAzMi4wNyAzNjAuMDYgMzAuNCAzMzIuNTggMjguMzUgMzc0LjYzIDI1LjIgMzM3LjE5IDIyLjQgMzg5LjA2IDE4LjUzIDMwMC43MiAxMS45MiAzMjQuNDYgMTAuMTQgMjgxLjEyIDYuOSAyNDIuNjIgOS43OCAyMjUuMyA3LjUzIDI2Ny43OSA0LjM1IDIzMy43NCAxLjgxIDIxMC4wMSAzLjU4IDE4Mi40NiAxLjUyIDE1Ni43MSAzLjQ1IDE4Mi44NyA1LjQxIDE1NC4wNCA3LjU2IDEyNS4yMiA1LjQxIDE0MS45MyA0LjE2IDEyMS45NyAyLjY2IDU4LjE1IDcuNDMgODAuNzcgOS4xMiA5LjA1IDE0LjQ4IDUxLjI5IDE3LjY0IDI5IDE5LjMxIDU2LjQ4IDIxLjM2IDE0LjQzIDI0LjUgNTEuODggMjcuMzEgMCAzMS4xOCA3MS4yOSAzNi41MiAzOC42NSAzOC45NiA3My4xMSA0MS41MyA4Mi4wMiA0MC44NyAxMDcuOTQgNDIuODEgMTQ2LjQ0IDM5LjkzIDE2My43NCA0Mi4xOCAxMTguODcgNDUuNTMgMTgwLjQ3IDUwLjE0IDE5My45NCA0OS4xMyAxNjkuNjkgNDcuMzIgMjA0LjMyIDQ0LjczIDIyOC41OCA0Ni41NCAyNDQuNDcgNDUuMzYgMjY3LjA5IDQ3LjA1IDMzMC45MSA0Mi4yOCAzMDguMyA0MC41OSAzODAuMDEgMzUuMjMgMzM3Ljc4IDMyLjA3Ij48L3BvbHlnb24+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjIyMy40OSA0OS4wNiAyNDYuNzQgNTAuOCAyNzAgNDkuMDYgMjQ2Ljc0IDQ3LjMyIDIyMy40OSA0OS4wNiI+PC9wb2x5Z29uPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI4NC4yOSA0Mi41NCAxMDcuNTQgNDQuMjggODQuMjkgNDYuMDIgNjEuMDMgNDQuMjggODQuMjkgNDIuNTQiPjwvcG9seWdvbj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMzg4LjkyIDg0LjMgNDA3LjAyIDgyLjk0IDM4NC43IDgxLjI3IDQxOC44NiA3OC43MiAzODguNDQgNzYuNDQgNDMwLjU4IDczLjMgMzU4LjgyIDY3LjkzIDM3OC4xIDY2LjQ5IDM0Mi45IDYzLjg1IDMxMS42MiA2Ni4xOSAyOTcuNTYgNjQuMzYgMzMyLjA3IDYxLjc4IDMwNC40MSA1OS43MSAyODUuMTMgNjEuMTYgMjYyLjc2IDU5LjQ4IDI0MS44NCA2MS4wNSAyNjMuMDkgNjIuNjQgMjM5LjY4IDY0LjM5IDIxNi4yNiA2Mi42NCAyMjkuODMgNjEuNjIgMjEzLjYyIDYwLjQxIDE2MS43OCA2NC4yOCAxODAuMTUgNjUuNjYgMTIxLjkgNzAuMDEgMTU2LjIgNzIuNTggMTM4LjEgNzMuOTMgMTYwLjQyIDc1LjYgMTI2LjI3IDc4LjE1IDE1Ni42OCA4MC40MyAxMTQuNTQgODMuNTggMTcyLjQ2IDg3LjkxIDE0NS45NCA4OS44OSAxNzMuOTMgOTEuOTggMTgxLjE3IDkxLjQ0IDIwMi4yMiA5My4wMiAyMzMuNSA5MC42OCAyNDcuNTUgOTIuNTEgMjExLjEgOTUuMjMgMjYxLjE0IDk4Ljk3IDI3Mi4wOCA5OC4xNiAyNTIuMzggOTYuNjggMjgwLjUxIDk0LjU4IDMwMC4yMiA5Ni4wNSAzMTMuMTMgOTUuMDkgMzMxLjUgOTYuNDYgMzgzLjM0IDkyLjU5IDM2NC45OCA5MS4yMiA0MjMuMjMgODYuODYgMzg4LjkyIDg0LjMiPjwvcG9seWdvbj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMjk2LjA4IDk4LjEgMzE0Ljk3IDk5LjUxIDMzMy44NiA5OC4xIDMxNC45NyA5Ni42OCAyOTYuMDggOTguMSI+PC9wb2x5Z29uPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIxODMuMDEgOTIuOCAyMDEuOSA5NC4yMiAxODMuMDEgOTUuNjMgMTY0LjEyIDk0LjIyIDE4My4wMSA5Mi44Ij48L3BvbHlnb24+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjU1My4wOSAzOC4yOSA1NjguMDIgMzcuMTggNTQ5LjYxIDM1LjggNTc3Ljc4IDMzLjY5IDU1Mi42OSAzMS44MiA1ODcuNDQgMjkuMjIgNTI4LjI2IDI0Ljc5IDU0NC4xNiAyMy42MSA1MTUuMTMgMjEuNDMgNDg5LjMzIDIzLjM2IDQ3Ny43MyAyMS44NSA1MDYuMiAxOS43MyA0ODMuMzggMTguMDIgNDY3LjQ5IDE5LjIxIDQ0OS4wMyAxNy44MyA0MzEuNzggMTkuMTIgNDQ5LjMxIDIwLjQzIDQzMCAyMS44NyA0MTAuNjkgMjAuNDMgNDIxLjg4IDE5LjU5IDQwOC41MSAxOC41OSAzNjUuNzUgMjEuNzkgMzgwLjkgMjIuOTIgMzMyLjg2IDI2LjUxIDM2MS4xNSAyOC42MyAzNDYuMjIgMjkuNzQgMzY0LjYzIDMxLjEyIDMzNi40NiAzMy4yMyAzNjEuNTUgMzUuMSAzMjYuNzkgMzcuNyAzNzQuNTYgNDEuMjcgMzUyLjY5IDQyLjkxIDM3NS43NyA0NC42MyAzODEuNzQgNDQuMTkgMzk5LjExIDQ1LjQ5IDQyNC45IDQzLjU2IDQzNi40OSA0NS4wNyA0MDYuNDMgNDcuMzEgNDQ3LjcgNTAuNCA0NTYuNzIgNDkuNzMgNDQwLjQ4IDQ4LjUxIDQ2My42NyA0Ni43NyA0NzkuOTMgNDcuOTkgNDkwLjU3IDQ3LjIgNTA1LjczIDQ4LjMzIDU0OC40OSA0NS4xMyA1MzMuMzQgNDQgNTgxLjM4IDQwLjQxIDU1My4wOSAzOC4yOSI+PC9wb2x5Z29uPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI0NzYuNTIgNDkuNjcgNDkyLjEgNTAuODQgNTA3LjY4IDQ5LjY3IDQ5Mi4xIDQ4LjUxIDQ3Ni41MiA0OS42NyI+PC9wb2x5Z29uPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIzODMuMjYgNDUuMzEgMzk4Ljg0IDQ2LjQ3IDM4My4yNiA0Ny42NCAzNjcuNjggNDYuNDcgMzgzLjI2IDQ1LjMxIj48L3BvbHlnb24+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNDUuNTYsMzkuMzZWMjcuMTNoNy41NnMzLjgsMS44LDkuNjQtNi40OUg3NS40NGw1LTMuNTRzNC4zMi02LjE3LDguMjgtNi4xNywxOS43Mi03LjIxLDE5LjcyLTcuMjFsMTctMy43MiwyMC4xNiw1Ljg5LDEwLjcyLDQuMzJzMTYuMzcsNi4wOCwxNC4xMiwxNmMwLDAsMi04LjIyLTE0LjEyLTEzLjgsMCwwLDguNzIsNi4zNyw2LjkyLDEwLjA4LDAsMCw5LjM2LDYuNDYsMTAuOCwxMS42OSwwLDAsMjAuODgsNi4xOSwyOS4xNi04LDAsMC0zLDYuNy01Ljc2LDgsMCwwLDE5LjQ0LDExLjU5LDM4LjE2LTgsMCwwLTEzLjQ4LDExLjc3LTEyLjYsMTYuNjNsLTUzLjI4LTEuNjJzLjU2LTIzLjUyLTMyLjY2LTI1LjU3UzEwMC4yOCwzMC4xOCwxMDMsMzYuNDhaIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTQwLjI4LDM3LjkzczYuMDgtMjIuMzIsMjcsMy4yNGMwLDAtMTQuNTctMjguNDQtMzAuMTQtNFoiPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNTkuNDcsMjYuMjhjLjIyLjE0LjU5LjQxLDEuMDcuNzgtLjY3LS41LTEuMDctLjc4LTEuMDctLjc4bTIwLjI4LDEyYTI3LjE2LDI3LjE2LDAsMCwwLTMuMjYtMS42NSw0MC45NCw0MC45NCwwLDAsMSwyLjgyLDguMTcsMzUuNjEsMzUuNjEsMCwwLDAtMy42Ni04LjU3LDgzLjQ3LDgzLjQ3LDAsMCwxLTEyLjE5LTdjNC45NCwzLjg0LDEyLjYyLDEwLjMyLDExLjg4LDEyLjg1LDAsMC0uMzgtMS0xLjEtLjY3cy0yLjczLDIuODQtNS4xOCwxLjQ5YTEuMTgsMS4xOCwwLDAsMC0uMDcuMmwuMDYtLjIxYTQsNCwwLDAsMS0uOTEtLjY3LDUuNCw1LjQsMCwwLDAsMSwuNGMuMzctMS44MS0uMTgtNS41Mi04LjI4LTkuNjcsMCwwLTIuNzUtLjMyLTIuOSwxLjg3LDAsMC04LjY1LTQuNDItOS4xNC0xLjEzczQuMjcsNC41LDQuMjcsNC41bC05LjEyLjMzYTExLjYsMTEuNiwwLDAsMSwyLjI0LTguNDRzLS4xNSwyLDEuNjYsMS40NCw1Ljc3LTQuNjYsNC42My03LjJhMjIuNTUsMjIuNTUsMCwwLDEsNi4yNiwzLjM3YzIuMDksMS44NSwxMi4xNiw4LjksMTAuNDIsMTQuOTQsMS4xNC4zMywyLjg5LjQzLDMuMy0yLC40OS0zLTcuMjMtOS44OS0xMS4wOC0xM2wtLjMzLS4yNy0uNS0uMzkuMjIuMTZhMzIuNzQsMzIuNzQsMCwwLDEtNi40LTYuNzcsNTcuNTYsNTcuNTYsMCwwLDAsMTguMjgsMTEuNDksNDEuMDcsNDEuMDcsMCwwLDAtOC44NS04LjEsMi44OCwyLjg4LDAsMCwxLS41Mi44MSw0LjI4LDQuMjgsMCwwLDAsLjI1LTFjLTguMjQtNS41Ny0yMC40Mi0xMC0zOC4zOS0xMS41LDAsMC0xNS45NC0uMzUtMTUuMDgsNy42MywwLDAtLjI3LDIuMjIsMy4xMywzLjE3YTMyLjI5LDMyLjI5LDAsMCwxLTUuNjktLjY2cy40Mi0xLS41NC0xLTE0LDguNDYtMTMuNCwxNC41NWMwLDAsMy4yOSwwLDYuMzYtNi4xNCwwLDAtMS41LDQuNDQtMi4zNCw2LjQ2LDAsMC00LjIxLDEuNDgtNS4xMyw1YTIwLjc0LDIwLjc0LDAsMCwxLTEuODQsNVM3NS4yNiw1OSw2MS45NCw2MC42MmMwLDAtNS45NC43NC0xMC4xLTJsMi40LS4xUzQ1LDU3LjEsNDEuMDcsNTEuMzUsMzMsMzMuMjUsMzQuNDEsMjUuNDJjMCwwLC44OSw3LjE0LDMuNTksMTEsMCwwLDIuNTgtMjIuODUsMjEuODgtMzUuOTIsMCwwLTUuMjUsNi4yOS01LjEzLDguODksMCwwLTIuMDgtLjU0LTQuNTEsNC4xOHMtMi4yMSwxMyw0LjMzLDEyLjE0LDguMS03LjY1LDctMTEuMzRjMCwwLDEuMTQsMi45MywzLjgxLDIuMDhhMTYuNjIsMTYuNjIsMCwwLDAsNS4xNi0zLjExcy0xLjUzLDUuODQsOC42NCwzLjM0bC0yLjkyLS4zNVM5MSw1LjE2LDk5LjU1LDEuNzRhOTguNzgsOTguNzgsMCwwLDAtMTEuODYsOFMxMTAuNzgtNCwxMzQsMS4xN2MuNjYuMTUsMS4yOC4zMiwxLjkyLjQ4bC0uMDgsMCwuNTMuMTUsMS44Mi40OWMzLjkyLDEsMTEuNzcsMi44MSwxNS43NywxLjkxLDAsMC0zLjQzLDEuMjQtMywyLjQzczcuNTksMy43MSw3LjU5LDMuNzEtMi4wNy42Mi0uMTUsMi41NWwwLDBjMy4yNSwzLDUuMTQsNiw1LjU5LDguMzJhNDUuMTUsNDUuMTUsMCwwLDEsMTAuMjEsMTEuMzJjOC41MSwyLjY3LDE4LjQ2LDIuNDUsMjcuMTQtNi42MiwwLDAtNC4zNiw1Ljg2LTQsNy4wOXMzLjM1LDEuNCwzLjM1LDEuNGwuODYsMS44cy03LjI3LTMuNzMtMTQuMDguNjZjMCwwLC41MiwxLjMsNC4zMy41NWE3LjkxLDcuOTEsMCwwLDEtMywuODNjLTIuNC4zOS00LjQ1LjczLTEuNTQsMy42NGE3MC41Myw3MC41MywwLDAsMS04LjQ3LTIuMzlzMi4wNy0uMDguOTUtMS4xMk04NS42NSwxMy4yNWwuNjguMzYuMzguNjcuMzYtLjY5LjY3LS4zOC0uNjgtLjM2LS4zOC0uNjctLjM2LjY5Wk04Ni44NywxNWEuNjUuNjUsMCwxLDAsMCwxLjMuNjUuNjUsMCwwLDAsMC0xLjNtLTIsMmEuNDQuNDQsMCwwLDAsLjQ0LjQzQS40NC40NCwwLDAsMCw4NS43LDE3YS40Mi40MiwwLDAsMC0uNDQtLjQzLjQ0LjQ0LDAsMCwwLS40My40NE04My41LDE1LjcxYS42Ny42NywwLDAsMCwuNjcuNjUuNjYuNjYsMCwwLDAsLjY0LS42Ny42NS42NSwwLDAsMC0uNjYtLjY0LjY2LjY2LDAsMCwwLS42NS42Nm0tMywyLjU2YS40NC40NCwwLDEsMCwuNDMtLjQ1LjQ1LjQ1LDAsMCwwLS40My40NW0yLjEzLDI2Ljk0Yy01Ljc4LDYuMzktMTEuMTYsMy44OC0xMS4xNiwzLjg4LDUuNDIsNC44NCwxMS4xNi0zLjg4LDExLjE2LTMuODhNODguMzEsMjIuOWMxLjEtMS4xLDcuOTMtNy44NCw3LjkzLTcuODRzLTcuNTgsNS42Ny0xMi41LDYuMzVjLTIuMTguMzEtNi4zOSwwLTExLjQ2LjY2LTMuMTIsMS41Ni03Ljg2LDMuODItOCwzLjE4LS4xMS0uMzcuMjktMSwuODMtMS42NEEzMy41NSwzMy41NSwwLDAsMCw1MS40LDMxLjc1UzQ5LDMzLjI4LDQ5LjU4LDMzLjYybDEuMTguNjdzLTMsMi0yLjIsMy4yOSw4LjExLTQuMTYsOC4xMS00LjE2YTQ1LjI2LDQ1LjI2LDAsMCwxLTUuOSw1LjM5LDUuNjUsNS42NSwwLDAsMC0yLjA4LDYuNDJzMSw0LDUuOTIsMi45MmwtLjMtLjUyLTEtLjUuOTQtLjU0LjUtMSwuNTMuOTQsMSwuNS0uOTQuNTMtLjIyLjQxYy4yOC0uMDguNTYtLjE2Ljg2LS4yNyw2LjE2LTIuMjcsMTMuNzgtLjQ4LDE3LC4yMXM3LjMtNC4wNiw5LjMxLTguODNjMCwwLDEsLjE1LDIuMjgtMS41MiwwLDAtMSwyLjYtLjM4LDMuNjFzMi4yMy4yNywyLjU1LS40NmwtLjcyLTEuNDFBMTAuMzcsMTAuMzcsMCwwLDAsOTAsMzVhNyw3LDAsMCwwLTEuMTUtNy41MiwxMy42OSwxMy42OSwwLDAsMSwxLjU5LDEuNzJzLjY4LTUuNSwzLjYtNy45MmMwLDAtNS4zNCwzLjM0LTYuMTgsMy43MnMtLjY3LTEsLjQyLTIuMTFNMTQyLDcuNTlzLTEwLjg3LTUuMzgtMjguMTYtMy44YTE3Ljg5LDE3Ljg5LDAsMCwxLTkuNTIsMy43NVM5Mi44LDExLjY0LDg3LjEyLDE3LjRjMCwwLDIuNTgtMi4zMyw1LjEtMS42MSwwLDAsMjQuMzEtMTguNTgsNDkuNzQtOC4ybS0xMC4zLDIuNTktLjQ4LS4yNS0uMjYtLjQ2LS4yNS40Ny0uNDcuMjcuNDguMjQuMjYuNDcuMjUtLjQ3Wm0yLjQ1LS42Mi0uNDctLjI1LS4yNi0uNDYtLjI1LjQ3LS40Ny4yNy40OC4yNS4yNi40Ni4yNS0uNDdabTIuNTUuMThhLjU2LjU2LDAsMCwwLS41Ni0uNTQuNTUuNTUsMCwwLDAtLjUzLjU2LjUzLjUzLDAsMCwwLC41NS41My41NS41NSwwLDAsMCwuNTQtLjU1bTIuNTMsMS44MWEuNTUuNTUsMCwwLDAtLjU1LS41NC41Ni41NiwwLDAsMC0uNTQuNTYuNTUuNTUsMCwwLDAsLjU2LjUzLjUzLjUzLDAsMCwwLC41My0uNTVtMS4xOC0xLjIyYS41My41MywwLDAsMC0uNTUtLjUzLjU1LjU1LDAsMCwwLS41NC41NS41NS41NSwwLDEsMCwxLjA5LDBtNS4xNSwyLjFhLjMyLjMyLDAsMCwwLS4zMy0uMzIuMzMuMzMsMCwwLDAsMCwuNjUuMzIuMzIsMCwwLDAsLjMyLS4zM20xLjEuODVhLjIyLjIyLDAsMCwwLS40MywwLC4yMi4yMiwwLDAsMCwuNDMsMG0xNi41OSw3LjI1Yy0xLjUzLTQuNjQtOC44LTExLjg5LTM4LjE2LTE0LjU0YTg3LjU0LDg3LjU0LDAsMCwxLDE3LjI4LDMuODksMS4zLDEuMywwLDAsMCwxLjIyLDEuODIsMS4yOSwxLjI5LDAsMCwwLDEuMjItMSw2OC43OSw2OC43OSwwLDAsMSwxOC40NCw5LjgxbS0xNS44LTMuMy0uMzQuNjQtLjYyLjM1LjYzLjM0LjM2LjYyLjMzLS42NC42My0uMzUtLjY0LS4zNFptMi4xNCwzLjg4LjQ2LS44OC44NS0uNDgtLjg3LS40Ni0uNDktLjg2LS40Ni44Ny0uODUuNDkuODcuNDZabTMyLjcsMTEuNDYuNTQtMSwxLS41Ny0xLS41NC0uNTctMS0uNTMsMS0xLC41NywxLC41M1ptMy4xNy0xLjkuNC0uNzYuNzUtLjQzLS43Ni0uNC0uNDMtLjc1LS40Ljc2LS43NS40My43Ni40Wm0uNjYsMS4yOS4zNC4xOC4xOS4zMy4xOC0uMzQuMzMtLjE5LS4zNC0uMTgtLjE5LS4zMy0uMTguMzRabTMuMTUuODcuMjctLjUxTDE5MCwzMmwtLjUxLS4yNy0uMjktLjUtLjI3LjUxLS41LjI5LjUxLjI2Wm01LjMyLTIuOTMuNTQtMSwxLS41Ny0xLS41My0uNTctMS0uNTMsMS0xLC41NywxLC41NFptNi41NiwxLjQ5LS4yMS40LS40LjIzLjQxLjIxLjIyLjM5LjIxLS40LjQtLjIyLS40MS0uMjJabS0yNi42My0zLjc0LjM1LS42Ny42Ni0uMzctLjY3LS4zNS0uMzctLjY2LS4zNi42Ny0uNjUuMzcuNjcuMzZaTTk3LjI0LDM2Ljc0bC0uNDUuODQtLjgzLjQ4Ljg1LjQ0LjQ3LjgzLjQ0LS44NC44My0uNDgtLjg0LS40NFptMy0xLjE3LS4yOS41My0uNTIuMy41My4yOC4zLjUzLjI4LS41NC41My0uMjktLjUzLS4yOVptMi42NiwyLjg5LS4zMi42MS0uNi4zNC42MS4zMi4zNC41OS4zMi0uNi41OS0uMzQtLjYtLjMyWm02Niw0Ljc5YTUuMTIsNS4xMiwwLDAsMS0uMjguNTgsMy4xNSwzLjE1LDAsMCwwLC4yOC0uNThtMC0uMXYwbTAsMCwwLC4wOCwwLS4wOG03NS4wOS0zMi41czIuMzEsNy42MywxLjEyLDEzLjEyYzAsMCwuMS01LjExLTEuODktMy44cy0xMC4wOCw4LjU2LTMuODIsMTIuMTFjMCwwLTE0LC40MS0xNSw5LjM3LDAsMC0zLjE5LS42Ny03LjY3LTEuMjhhMTUuMDcsMTUuMDcsMCwwLDEtMi4xOSwxLjI1Yy04LjMzLDQtMjkuNTIsOC41LTIzLjQyLS4wOC0yLjc5LDEuNTctNC4wNiw0LjE0LTIuNTUsOC4xNywwLDAtNC44OS04LjUsNy44NS0xMS4wOCwwLDAtMi45NC0xLjIzLTEuMzItMi4zNSwwLDAsMTEuODUsNC4zLDIyLjU4LDIuMjEsMS4wOS0xLjQxLjg4LTMtMS40NC00Ljc0LDAsMCwzLjYsMS45MSwyLjQyLDQuNTNhMjAuNSwyMC41LDAsMCwwLDguMTctMy43OXMtMy44MSwxLjE2LTUuNjMsMS41NUEzNy4yMywzNy4yMywwLDAsMCwyMjksMzEuNTJsLS4yOS0uNS0xLjM4LS43MywxLjM2LS43OC43My0xLjM4Ljc4LDEuMzYuODYuNDVhMzksMzksMCwwLDAsMTMtMTkuMjdNMjE1LjY4LDQwYy02LjM0LS44Mi0xNC43Ny0xLjQzLTIwLjY1LS4wNy0xLjQzLjY5LTMuODUsMi4xOS0yLjYzLDRzMTYuODUtLjEsMjMuMjgtNG0zMi4xNS0yMi4yOC0uMzYuNjktLjY5LjM5LjcuMzYuMzkuNjkuMzYtLjcuNjgtLjM4LS42OS0uMzdaTTI1MCwxNi42M2wtLjE3LjM0LS4zMy4xOC4zMy4xOC4xOS4zMy4xOC0uMzQuMzMtLjE4LS4zNC0uMThabS0yLjIzLTIuODItLjUzLDEtMSwuNTYsMSwuNTMuNTcsMSwuNTMtMSwxLS41Ni0xLS41M1pNMjUyLjQ0LDEybC0uMzMtLjU5LS4zMS42LS41OS4zMy42LjMxLjMzLjU5LjMxLS42LjU5LS4zM1ptLTIxLjYsMTYuMTguMzItLjU5LjU4LS4zMy0uNTktLjMyLS4zNC0uNTgtLjMxLjU5LS41OC4zNC41OS4zMVptLTIuNTgtMS42OS4yOC0uNTQuNTItLjI5LS41My0uMjgtLjMtLjUzLS4yOC41NC0uNTIuMjlMMjI4LDI2Wk0yMjcuNTUsMjhhLjQ3LjQ3LDAsMCwwLC40Ny40NS40Ni40NiwwLDAsMCwuNDUtLjQ2LjQ3LjQ3LDAsMCwwLS40Ny0uNDUuNDYuNDYsMCwwLDAtLjQ1LjQ2bTMuNTEtMy4yNWExLDEsMCwwLDAsMS0xLDEsMSwwLDAsMC0xLTEsMSwxLDAsMSwwLDAsMk0yMzQuNjUsMjFhLjQ2LjQ2LDAsMSwwLDAtLjkxLjQ2LjQ2LDAsMCwwLDAsLjkxTTIwNS4yNiwzOC4xM2EuOTIuOTIsMCwxLDAtLjkyLS45LjkyLjkyLDAsMCwwLC45Mi45bTMuMzUtMi4yNWEuNDQuNDQsMCwwLDAsLjQ0LS40Ni40Ni40NiwwLDEsMC0uNDQuNDZtLTUuNjgsNC42NmEuNTYuNTYsMCwwLDAsLjU2LjU0LjU1LjU1LDAsMSwwLS41Ni0uNTRNNTcuMTksNDUuNDNsLS4xNS4yOC0uMjguMTYuMjkuMTUuMTYuMjguMTUtLjI4LjI4LS4xNi0uMjktLjE1Wk01Ny41LDQ0bC0uMi4zOC0uMzguMjEuMzguMi4yMS4zOC4yMS0uMzguMzctLjIxLS4zOC0uMjFaTTU1LjYzLDQzbC0uMjcuNTEtLjUuMjkuNTEuMjYuMjguNTEuMjctLjUxLjUxLS4yOS0uNTEtLjI3Wk04MCwzMC4zNGwtLjE2LjMtLjMuMTcuMy4xNS4xNy4zLjE2LS4zLjI5LS4xNy0uMy0uMTZabTMtMy4yLS40MS43OS0uNzguNDQuNzkuNDIuNDQuNzguNDItLjc5Ljc4LS40NS0uNzktLjQxWm0tMjIsMTUuNjEtLjMuNTctLjU2LjMyLjU3LjMuMzIuNTYuMy0uNTcuNTYtLjMyLS41Ny0uM1ptMjAtMTMuNDQtLjE3LjMyLS4zMS4xOEw4MSwzMGwuMTcuMzEuMTctLjMyLjMxLS4xOC0uMzEtLjE3Wm05OC4yLDE1LjUyYTQ3LjQ0LDQ3LjQ0LDAsMCwxLDEuMTYsMTEuMjQsMzEuMDYsMzEuMDYsMCwwLDAtMS4xNi0xMS4yNCI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTU3LjMyLDI2LjY0cy02LjU0LDQuNjQtNC43NCw2LjI1LDQuNjQtMS40Miw0LjY0LTEuNDItLjg1LDIuMTgsMCwyLjQ2LDQtMy4xMiw5LjE5LTEuNjFjMCwwLTQuNzMuMTktMy42OSwzLjEzTDQ2LDM2LjQ5bC4xOS00LjM2czYuNTQtNS4zLDExLjE4LTUuNDkiPjwvcGF0aD48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik04MC44NSwzNC41NnMzLjY1LjA5LDUtMi42MWExLjE2LDEuMTYsMCwwLDAsMS40OC43OEEzLjA3LDMuMDcsMCwwLDAsODkuMiwyOC45YTQuMjksNC4yOSwwLDAsMSwuMjYsNHMtMS42NS44Ny0xLjU3LDEuOTFaIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNNTIuMzIsMzIuNDhzLTEtMiwuNzgtNWMwLDAtMS4wNSwyLjkxLjM3LDMuNTZaIj48L3BhdGg+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjcyLjI4IDIyLjA3IDc2Ljk3IDE5LjA3IDcyLjkxIDIyLjUxIDcyLjI4IDIyLjA3Ij48L3BvbHlnb24+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTgyLjc3LDE4LjI4aC0ydi05aDJjMi41OCwwLDQsMS42NSw0LDQuNTJzLTEuNDcsNC40OC00LDQuNDhtMjcuNTktOFY5Ljc1YTUuOSw1LjksMCwwLDAtMSwuMzcsNC4zMyw0LjMzLDAsMCwxLDEsLjExTTE4OC44OCwxOC4xbC0uNTUuNzYuMi0yLjE1YTUuODMsNS44MywwLDAsMSwyLTMuNzFjLS4xNSwwLS4zMiwwLS41LjA4bC0xLjkzLjM5LDEuMzktMS4zOWE3LjMsNy4zLDAsMCwxLDEuNzMtMS4xNGwuMjEtLjEyYTguMjcsOC4yNywwLDAsMC00LTQuNzIsOS41Nyw5LjU3LDAsMCwwLTQuMy0xaC0zLjUxYTI1LjYzLDI1LjYzLDAsMCwxLTUuMDctLjI2LDUuNiw1LjYsMCwwLDEtMS41OC0uNjhMMTcyLjcyLDRsMCwuMjVhNS41LDUuNSwwLDAsMCwyLjQ2LDMuNjFjLjQzLjMxLjc0LjYyLjc0LDEuNzNWMTkuNjRjMCwxLjA4LS4yMiwxLjM4LS43MiwxLjY4bC0xLjY2LDEtLjM5LjIzaDkuMTRhOS41NSw5LjU1LDAsMCwwLDUuOS0xLjU5LDYuOSw2LjksMCwwLDAsLjY4LS41Myw3Ljc4LDcuNzgsMCwwLDEsMC0yLjMxbTE3LjUuMjRhLjYxLjYxLDAsMCwwLC4wNi0uNTZsLS41Ni0xLjU1LDEuNDIuODVhMi40LDIuNCwwLDAsMSwuMzcuMjhsLjg2LS4wNmE0LDQsMCwwLDEsMS44My4yNFYxMy4xM2EyLjM3LDIuMzcsMCwwLDAtLjY4LjMzbC0uMzYuMzMtLjM5LS4zYTEuNzUsMS43NSwwLDAsMC0xLS4zLDIuMywyLjMsMCwwLDAtMS43Mi43NmMtLjI1LjI5LS40OC42LS43Ljl2My41Yy4zNS4yNy43MS4yNi45LDBNMjE3LDYuMWE5LjU3LDkuNTcsMCwwLDAtNC4zLTFoLTMuNTJhMjUuNTEsMjUuNTEsMCwwLDEtNS4wNi0uMjYsNS45MSw1LjkxLDAsMCwxLTEuNTktLjY4TDIwMi4yNyw0bDAsLjI1YTUuNTEsNS41MSwwLDAsMCwyLjQ1LDMuNjFjLjQ0LjMxLjc0LjYyLjc0LDEuNzN2LjczYTkuMjUsOS4yNSwwLDAsMSwxLjYxLS43OCw1LDUsMCwwLDAtLjY1LjcsNC4zMyw0LjMzLDAsMCwxLDEuNjgtLjYxLDYuMTUsNi4xNSwwLDAsMSwyLjI0LDBWOS4yOGgyYzIuNTgsMCw0LjA1LDEuNjUsNC4wNSw0LjUycy0xLjQ3LDQuNDgtNC4wNSw0LjQ4aC0uNzdhMy4yNiwzLjI2LDAsMCwxLDEuMTEsMi40MSwzLjIxLDMuMjEsMCwwLDEtLjYsMS44NCw5LjQ3LDkuNDcsMCwwLDAsNS43LTEuNTksOC4zLDguMywwLDAsMCwxLjg3LTEuNzEsOC44OSw4Ljg5LDAsMCwwLDEuODItNS40OEE4LjQ1LDguNDUsMCwwLDAsMjE3LDYuMSI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE5MS44Miw3LjE2QTQuMTUsNC4xNSwwLDAsMSwxOTMsMy42OGE0Ljg3LDQuODcsMCwwLDEsNC0xLjQyLDQuMiw0LjIsMCwwLDEsNC4zMSw0LjMxQTYuNDMsNi40MywwLDAsMSwyMDAuMDcsMTBhLjguOCwwLDAsMC0uMTMtLjEzbC0uNDgtLjQ1YTkuMjEsOS4yMSwwLDAsMS0xLjM5LTEuNDdjLjgtMS40NS4zNS0zLjUxLTEuMzQtMy41MUExLjg2LDEuODYsMCwwLDAsMTk1LDYuNTNhNC44NSw0Ljg1LDAsMCwwLS4zNCwyLjEzLDIuNTksMi41OSwwLDAsMS0xLjA4LTEuMUwxOTMsNi4wN2wtLjQ5LDEuNTNhMi43MSwyLjcxLDAsMCwwLS4wOCwxLjE3aDBhMy4zNCwzLjM0LDAsMCwxLS41NS0xLjYxTTE4OS45LDEyLjVjLjgzLS44MywyLjUzLTEuMzUsMi42NS0xLjhzLS43Ny0xLjIxLTEuMS0xLjM1YTUuMDYsNS4wNiwwLDAsMSwxLjgyLjE4QTIuMTQsMi4xNCwwLDAsMSwxOTMsNy43OGMuNjYsMS41OSwzLDEuODQsMy42LDMuMTVhMi41NSwyLjU1LDAsMCwwLTEuMjQtMS41NywzLjc3LDMuNzcsMCwwLDEsLjMyLTIuODljLS4xNCwyLjI5LDMuMTIsMy41OSwzLjgsNS4yNS0uNC0xLjQyLTEuOTItMi4zMi0yLjY0LTMuMTdhMi4zMywyLjMzLDAsMCwxLC4yLTEuODVjLS4wNywxLjUzLDEuNTgsMi43MiwyLjQ2LDMuNThhMywzLDAsMCwxLDEuMiwyLjYyLjYyLjYyLDAsMCwxLC40OC42NiwxLjMxLDEuMzEsMCwwLDAsLjc2LS42OSwyLjc1LDIuNzUsMCwwLDEtMS4yNiwyLjY5LDEsMSwwLDAsMC0uMTQtMWMtLjMzLS40MS0xLjI5LS40Mi0xLjYxLS4zOSwwLDAsLjM5LS41OS4yNC0uODlzLTIuMDctLjItMi45LjFhMy41NywzLjU3LDAsMCwxLDEuMTkuMTRjLS4xMy4yLS40NywxLS4yMywxLjI3cy41My0uMTcuNTMtLjE3LS4yOS45LS4wOCwxLjExLjY1LjA2LjY1LjA2QTIuNDcsMi40NywwLDAsMSwxOTYuMjQsMTdhMS41NywxLjU3LDAsMCwwLC43OC0uODYsMiwyLDAsMCwxLS45MS4xMiwxLjQxLDEuNDEsMCwwLDAsLjU4LTEuNDRjLS4yMi0xLTEuNjctMS4xNy0yLjQtLjY3YTIuODYsMi44NiwwLDAsMSwxLjQ5LTEuNTYsNi4zLDYuMywwLDAsMC0xLjEtLjI4LDQuMjEsNC4yMSwwLDAsMSwyLjIyLS42NiwzLjc2LDMuNzYsMCwwLDAtMy4zMiwxLDUuMzEsNS4zMSwwLDAsMSwxLjEuMiw2LjcsNi43LDAsMCwwLTIuODYsMS42MUEzLjE3LDMuMTcsMCwwLDAsMTkyLDEzYy0uMi0uNTEtLjgyLS43My0yLS40N205LjQuMTFhMS44NSwxLjg1LDAsMCwwLTEuMDktMS4xMWMuMTcuNTguMzksMS4xMSwxLjA5LDEuMTFtMTIuNzcsOC4wOGEzLDMsMCwwLDAtMy40OC0yLjgxLDEuNiwxLjYsMCwwLDEsMS4yNywxLjQ2YzAsMS4zMS0xLjY0LDEuNzItMi41NCwxLjUxYTIuMSwyLjEsMCwwLDAtLjMzLTMuMjcsMS4xNSwxLjE1LDAsMCwxLTEuOTIsMS4yMWMtLjYzLS41Mi0yLjEtMS43NS0yLjc1LTIuMjdzLTEuNDItLjIyLTEuNzMtLjQ1LS4xMi0xLS41OS0xLjI3LS43OC0uMS0xLjI0LS4yNWEuODYuODYsMCwwLDEtLjY3LS45LDEuMTMsMS4xMywwLDAsMCwuMTIsMS4yMmMuMzIuMzYuODQuNTgsMSwxcy0uMTksMS4yMywxLjA2LDIuMjFjLjU5LjQ2LDEuNTEsMS4yMywyLjExLDEuNzUsMSwuODkuNDcsMiwuNiwzYTIuMzgsMi4zOCwwLDAsMCwxLjY3LDEuOTIsMS43NiwxLjc2LDAsMCwxLDAtMi40QTMuMTYsMy4xNiwwLDAsMCwyMDcsMjUuMTIsMy44MiwzLjgyLDAsMCwwLDIxMC43NSwyNGEyLjY1LDIuNjUsMCwwLDEtMi4zMy0uNDksMy4wNiwzLjA2LDAsMCwwLDMuNjUtMi43OW0tMTAtLjQzYy0uNTEtLjQ2LTEuMjgtMS4xLTEuODctMS41Ni0uNjYsMS4xMy0yLjA2LDIuNi0zLjQ5LDIuNi0yLjYyLDAtMy45NC0zLjcxLTEtNi43NWExLjIsMS4yLDAsMCwwLS4zOS0uMDYsMS4xNCwxLjE0LDAsMCwwLS42Ni4xOGwtMS4xNi44LjI2LTEuNDguMDktLjIzYTYuNTEsNi41MSwwLDAsMC0xLjU3LDEuMDhsLTEuMTQsMS4yNC4xMy0xLjc1YzAtLjEzLDAtLjI3LjA3LS4zOWEyLjE0LDIuMTQsMCwwLDAsLjA5LS43Ni4yMi4yMiwwLDAsMC0uMDgtLjA5LDUuNjMsNS42MywwLDAsMC0yLjIxLDMuNjcsMS42NSwxLjY1LDAsMCwxLC41NC0uNWMuMTctLjA2LjMxLDAsLjE1LjUtLjA2LjE5LTEuNDksNC4wNywxLjMzLDYuNzYsMCwwLS4zMS0uNzktLjEyLTFzLjIxLS4xMy4zNy4wOC4yNS4zMi4zOC40N2gwYTUuMTcsNS4xNywwLDAsMCw0LjA3LDEuOGMzLjQ5LDAsNS4zNC0yLjQxLDYuMzctNC40M2wtLjE2LS4xNW02LTguNDNjLTIuNi4xMy00Ljg0LDIuMzQtNiwzLjlhMiwyLDAsMCwxLC42Mi4zM2wxLC44YTEzLjksMTMuOSwwLDAsMSwyLjA4LTMuMywyLjc4LDIuNzgsMCwwLDEsMy41NS0uNTQsNS4xNiw1LjE2LDAsMCwxLDMuNTgtLjcxLDUuMTEsNS4xMSwwLDAsMC0zLjQ2LTEuNmMtMS4yMiwwLTEuOTIuNi0yLjA5LjMzcy44My0uODYuODMtLjg2Yy0xLjQ1LjA2LTIuNSwxLjc2LTIuOTQsMS41NS0uMjYtLjEzLjM5LTEsLjM5LTFhNi4zNCw2LjM0LDAsMCwwLTIuNjYsMy4zOSw2LjU1LDYuNTUsMCwwLDEsNS4xMS0yLjM0bS40NCw2LjYzYTEsMSwwLDAsMSwuNzguODguNzguNzgsMCwwLDEtLjQyLjY5LDEuNjIsMS42MiwwLDAsMS0uNDIuMTksMi42NSwyLjY1LDAsMCwwLC4xMi0uOWMwLS41NS0uMDYtLjg2LS4wNi0uODYiPjwvcGF0aD48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMjEuODUgNDYuMjggMjEuODUgODMuNzggNTcuMzUgNzkuMTQgNTcuMzUgNDEuNjQgMjEuODUgNDYuMjgiPjwvcG9seWdvbj48cG9seWdvbiBjbGFzcz0iY2xzLTQiIHBvaW50cz0iMjEuODUgNDYuMjggMjEuODUgODMuNzggNTcuMzUgNzkuMTQgNTcuMzUgNDEuNjQgMjEuODUgNDYuMjgiPjwvcG9seWdvbj48cGF0aCBjbGFzcz0iY2xzLTUiIGQ9Ik0yMi42Myw0OC43OWwzNC43Mi00LjQyTTIyLjYzLDgxbDM0LjcyLTQuOTMiPjwvcGF0aD48cG9seWdvbiBjbGFzcz0iY2xzLTYiIHBvaW50cz0iNTcuMzUgNDEuNjQgMzMuMTMgMzguMDYgMzMuMTMgNzUuNTYgNTcuMzUgNzkuMTQgNTcuMzUgNDEuNjQiPjwvcG9seWdvbj48cG9seWdvbiBjbGFzcz0iY2xzLTQiIHBvaW50cz0iNTcuMzUgNDEuNjQgMzMuMTMgMzguMDYgMzMuMTMgNzUuNTYgNTcuMzUgNzkuMTQgNTcuMzUgNDEuNjQiPjwvcG9seWdvbj48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0yNTIuMTcsNzUuNTZjLTYxLjc1LDExLjI1LTE1Ny4yOS0xMS4yNS0yMTksMFYzOC4wNmM2MS43NS0xMS4yNSwxNTcuMjksMTEuMjUsMjE5LDBaIj48L3BhdGg+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMjUyLjE3LDQxcy0xOS44Nyw4LTExNC0uMjlDNzEuNjIsMzQuOCwzOC40MSw0MCwzMy4yOCw0MC44Nk0yNTMuMDUsNzEuOTRzLTIwLjUsOC42Ni0xMTQuNjcuMzNjLTY2LjUxLTUuODktOTkuNzItLjczLTEwNC44NS4xNyI+PC9wYXRoPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTI1Mi4xNyw3NS41NmMtNjEuNzUsMTEuMjUtMTU3LjI5LTExLjI1LTIxOSwwVjM4LjA2YzYxLjc1LTExLjI1LDE1Ny4yOSwxMS4yNSwyMTksMFoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==");
 }
+}
 
-/*Box itself*/
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* The Box Itself*/
 .charsheet .licensecontainer .container:not(.npc) .saving-throw-container,
 .charsheet .licensecontainer .container:not(.npc) .skills-container {
     border: none;
@@ -5232,8 +5215,10 @@ button.rollabil.btn.dfontd20 {
     padding-bottom: 30px;
     box-shadow: 0px 0px 2px var(--color-text-disabled);
 }
+}
 
-/* bottom text */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Bottom Text */
 .charsheet .licensecontainer .container:not(.npc) .saving-throw-container .label,
 .charsheet .licensecontainer .container:not(.npc) .skills-container .label {
     bottom: 8px;
@@ -5427,8 +5412,12 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     padding-left: 5px;
 }
 
+.licensecontainer .container:not(.npc) .hp .top span{
+    margin-left: 15px !important;
+}
+
 .charsheet .licensecontainer .container:not(.npc) .hp .top input {
-    width: 110px !important;
+    width: 132px !important;
 }
 
 .charsheet .licensecontainer .container:not(.npc) .hdice-dsaves-container {
@@ -5482,7 +5471,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 }
 
 .charsheet .col {
-    width: 32%;
+    width: 32.16874885559082386%;
 }
 
 .charsheet .col2 {
@@ -5491,7 +5480,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 }
 
 .charsheet .body {
+    width: 800px;
     margin-top: 40px;
+    margin-left: -25px;
 }
 
 .attributes .body.editable .attrib div.attrname:hover {
@@ -5658,7 +5649,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     box-shadow: 0px 0px 2px var(--color-text-disabled);
     border: 0px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Clickable Text */
 .charsheet .attr-container button[type="roll"],
 .charsheet .saving-throw button[type="roll"],
@@ -5678,7 +5671,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .action .display button[type="roll"]:hover * {
     color: var(--color-yellow) !important;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Labels Big */
 .charsheet .licensecontainer .container:not(.npc) .saving-throw-container .label span,
 .charsheet .licensecontainer .container:not(.npc) .skills-container .label span,
@@ -5713,7 +5708,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .tool_proficiencies {
     padding-bottom: 6px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Labels Small */
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .ac .pc-ac,
 .charsheet .ac-init-speed-container span.label,
@@ -5727,7 +5724,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .init button {
     color: var(--color-text-primary);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Fonts */
 .charsheet .insp-prof-container .value input,
 .charsheet .saving-throw input[type="text"],
@@ -5825,7 +5824,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     margin-bottom: 2px;
     float: left;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Dragable badges */
 .charsheet .attacks .display input,
 .charsheet .tool .display input,
@@ -5862,17 +5863,17 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 
 .charsheet .licensecontainer .container:not(.npc) .display button * {
     width: 40% !important;
-    min-width: 40%;
-    max-width: 40%;
-    font-size: 10px;
+    min-width: 38%;
+    max-width: 38%;
+    font-size: 9px;
     font-family: var(--font-number);
 }
 
 .charsheet .licensecontainer .container:not(.npc) .display button input[name="attr_atkbonus"],
 .charsheet .licensecontainer .container:not(.npc) .display button input[name="attr_toolbonus_display"] {
     width: 10% !important;
-    min-width: 10%;
-    max-width: 10%;
+    min-width: 15%;
+    max-width: 15%;
     font-family: var(--font-number);
 }
 
@@ -5913,7 +5914,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .tool_proficiencies {
     padding-top: 5px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Add Modify */
 .charsheet .repcontrol .btn {
     color: var(--color-none) !important;
@@ -6124,139 +6127,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     color: var(--color-text-primary);
     background-color: var(--color-element-bg);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Inventory */
-/*.charsheet .money {
-        width: 100% !important;
-        display: block !important;
-        margin-left: 5px !important;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .coin {
-        display: inline-block;
-        background-image: none !important;
-        background-color: var(--color-bg-light);
-        border-radius: 4px;
-        width: 45px;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .coin
-        .label {
-        background-position: 0px 0px;
-        left: -3px;
-        top: -5px;
-        line-height: 42px;
-        text-indent: 2px;
-        font-size: 6px;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .coin
-        input {
-        left: -3px;
-        top: 0px;
-        width: 26px;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .equipment
-        .weighttotal {
-        left: unset;
-        top: unset;
-    }
-    .charsheet
-        .container:not(.npc)
-        .equipment
-        .complex {
-        width: 96% !important;
-        padding: 5px;
-        margin-top: 30px;
-    }
-    .charsheet .container:not(.npc) .item .name {
-        width: 75%;
-    }
-
-    .charsheet
-        .container:not(.npc)
-        .equipment
-        .header
-        span:nth-last-of-type(1) {
-        display: block;
-        width: 15px;
-        height: 15px;
-        float: right;
-        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABOUExURUdwTIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlIiJlFNgF1AAAAAZdFJOUwAUNUV34Ab6tYGuHtXvomOPJsNuLJlOyeoe7rvvAAAArUlEQVQYGX3ACZaCMBBF0Q8kqQSc57f/jTZKox6pcPUlhQc8QpIrZV5ykieA5WwQ5IlYJ3VGlGOArFGGQUsD9Br1MMgRsVZqjahfoZRyB3IG7qWUoC9HFo76CCwEfWQWst7SloVt0qzD0Wl2wHHQbINjo38NrkaTPa69JjtcO00Ml+mlpaLVU6Gi6OlExUmjxqiwRtKNqpukK1VXSZGqKF1YcdGZFWf1rOhlrLA/sh03526/DgwAAAAASUVORK5CYII=");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-    }
-    .charsheet .equipment .header span img {
-        display: none;
-    }
-    .charsheet .header span.pictos {
-        font-family: "Pictos" !important;
-    }
-    .charsheet .equipment .header span:nth-of-type(2) {
-        width: 75% !important;
-        text-align: center !important;
-    }
-    .charsheet
-        .licensecontainer
-        .container:not(.npc)
-        .equipment
-        .weighttotal {
-        width: 96%;
-        top: 38px;
-    }
-    .charsheet
-        .equipment
-        .weighttotal
-        span[data-i18n="total-weight-u"] {
-        display: block;
-        float: left;
-        width: 30%;
-        padding-top: 10px;
-        color: var(--color-text-secondary);
-    }
-    .charsheet .equipment .weighttotal input {
-        width: 40%;
-    }
-    .charsheet .equipment .encumb {
-        float: right;
-        width: 30%;
-        padding-top: 5px;
-    }
-    .charsheet .equipment .warning span,
-    .charsheet .charactermancer_options .warning span,
-    .charsheet .equipment .encumb {
-        color: var(--color-red);
-        text-shadow: 0px 0px 5px;
-    }
-    .charsheet .equipment {
-        min-height: 140px;
-    }
-    .charsheet .equipment .item .subitem .equippedlabel,
-    .charsheet .equipment .item .subitem span {
-        background: none;
-        color: var(--color-text-secondary);
-    }
-    .charsheet .item .subitem .subfield {
-        width: 77%;
-        font-family: var(--font-secondary);
-        font-size: 10px;
-        padding-top: 4px;
-    }
-    .charsheet .item .inventorysubflag:checked ~ .subitem {
-        margin-top: 2px;
-        box-shadow: 0px 0px 5px var(--color-yellow);
-    }*/
-/*---------new version--------*/
 .charsheet .licensecontainer .container:not(.npc) .equipment.hidden {
     padding-bottom: 5px;
     min-height: 0px;
@@ -6269,6 +6143,23 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 
 .charsheet .equipment {
     min-height: 140px;
+}
+
+.charsheet .licensecontainer .container:not(.npc) .equipment .money{
+    width: 248px;
+    height: 215px;
+    display:grid;
+    grid: 35px/ auto;
+    padding: 1px;
+    row-gap: 3px;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    float:right;
+    align-content: center;
+}
+
+.charsheet .licensecontainer .container:not(.npc) .equipment .money .coin{
+    width: 250px;
 }
 
 .charsheet .licensecontainer .container:not(.npc) .equipment .money .coin:after,
@@ -6285,12 +6176,58 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 
 .charsheet .licensecontainer .container:not(.npc) .coin .label {
     background-position: 0px 0px !important;
-    left: -3px !important;
-    top: -5px !important;
+    left: -1px !important;
+    top: 3px !important;
     line-height: 42px !important;
     text-indent: 2px !important;
-    font-size: 6px !important;
+    font-size: 10px !important;
     color: var(--color-text-secondary) !important;
+    width: auto;
+}
+
+.licensecontainer .container:not(.npc) .coin .label{
+    visibility: hidden;
+}
+
+.licensecontainer .container:not(.npc) .coin .label:after{
+    visibility: visible;
+    content: ' Copper Piece ';
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    position: relative;
+    top: -8px;
+    left: -11px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.licensecontainer .container:not(.npc) .coin + .coin .label:after{
+    visibility: visible;
+    content: ' Silver Piece ';
+}
+
+.licensecontainer .container:not(.npc) .coin  + .coin  + .coin .label:after{
+    visibility: visible;
+    content: ' Gold Piece ';
+}
+
+.licensecontainer .container:not(.npc) .coin  + .coin  + .coin  + .coin .label:after{
+    visibility: visible;
+    content: ' Platinum Piece ';
+}
+
+.licensecontainer .container:not(.npc) .coin  + .coin  + .coin  + .coin  + .coin .label:after{
+    visibility: visible;
+    content: ' Other ';
+}
+
+.licensecontainer .container:not(.npc) .equipment .money .coin input{
+    left: 75px !important;
+    width: 170px !important;
+    font-size: 20px !important;
+    text-align: right;
 }
 
 .charsheet .licensecontainer .container:not(.npc) .coin input {
@@ -6340,7 +6277,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 }
 
 .charsheet .licensecontainer .container:not(.npc) .equipment .complex .item .name {
-    width: 152px !important;
+    width: 160px !important;
 }
 
 .charsheet .equipment .warning span,
@@ -6382,7 +6319,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     background-color: var(--color-element-bg) !important;
     border: 2px solid var(--color-element-bg) !important;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Traits */
 .charsheet .licensecontainer .container:not(.npc) .traits {
     min-height: 50px !important;
@@ -6409,7 +6348,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .traits .options input[name="attr_name"] {
     width: 167px !important;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Prof */
 .charsheet .tool_proficiencies {
     padding-bottom: 17px;
@@ -6432,7 +6373,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .licensecontainer .container:not(.npc) .proficiencies .display button * {
     width: 44% !important;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Attack */
 .charsheet .globalattack .label {
     border-top: 1px dashed var(--color-text-disabled);
@@ -6456,17 +6399,28 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .pc .global-mod .active-flag:checked ~ div.display > span {
     box-shadow: inset 0px 0px 5px var(--color-yellow);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Resourses */
 .charsheet .resources .repcontrol {
     margin-top: -3px;
 }
+}
 
-/* Speed Init AC */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Speed Init */
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .init span,
-.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .speed input,
-.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .ac input {
+.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .speed input{
     font-size: 25px;
+    font-weight: 700;
+}
+}
+
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* AC */
+.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .ac input{
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -6487,7 +6441,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     margin-top: 10px;
 }
 
-.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .ac input {
+.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container {
     margin-top: 10px;
 }
 
@@ -6500,13 +6454,17 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .speed .label {
     bottom: 13px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Line Input */
 .charsheet .hp .top input,
 .charsheet .hdice-dsaves-container .top input[type="text"] {
     border-bottom: 1px solid var(--color-text-disabled);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* HP */
 .charsheet .hp input {
 
@@ -6517,12 +6475,16 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .hp input[type=number] {
     font-size: 28px !important;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Textarea */
 .charsheet .textbox textarea {
     font-size: 13px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Container Icons */
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .init,
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .speed,
@@ -6643,7 +6605,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .licensecontainer .container:not(.npc) .saving-throw-container {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACrUExURUdwTOzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9uzt9orJI/sAAAA4dFJOUwD28gQVMyli1f3vtHRP30eJkxvrmlXiEdAOZge72YDCCi6t+UI5Wm2fd6N7S+c8X6any8eOIiONP68JdwAAAXZJREFUOMvN1NeagjAQBtChBAxdigiuFXt36//+T7Y3KAmIeunc8eVkMikM0TsFC4LpC0xfA+Cx/oRpOwUAAHWjPXKuh1sM963M+IAUH8ZdlnVRj+I7bbqVijth5TW2GN7GlFzXzWpWfyHBXpVkRkS0rb57csZ+NTJibKRUGZnoEldbRfdqjHLNTQTYwZilXV5nvDthY6giPO+UtT6tnaNt6DEHIMIj+bAcTboZX3MsoAZzIhvw3MGmPBjVGfjXWSI8ZOSUq505wNepYd9yS5vpOZ2y/owFwTQTdyZB4UT2RPNo1n0KUYRh8UfUDrld3odpWhP6aYdbMpQS2kSzdmgTrUqongTXXNqgsITCKw+T5mYOx1MdWinNRfgl3bEAA6K4L8BlO1wWS/FB+p37kA89X/5pBuVL+Z33pBqdQbOXxByARvMKtnWW6RhwiT6vcMxae0XiRcYVesmj5jPZRH2YJqCMJk/6WXjhro9L+EKHzIjSt+rs/xxjf+1GkXknAAAAAElFTkSuQmCC");
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Options */
 .charsheet .tool .options input,
 .charsheet .attack .options input[type="text"],
@@ -6659,7 +6623,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     background-color: var(--color-bg-light);
     border-bottom: 1px solid var(--color-element-bg);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Whisper Toggle */
 .charsheet .licensecontainer .advantagetoggle.whispertoggle:not(.npc) {
     left: 498px;
@@ -6669,8 +6635,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .advantagetoggle.whispertoggle:not(.npc) input[type="radio"] + span {
     width: 70px !important;
 }
+}
 
-/* --------------------------------- Spells --------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Character Spells */
 .charsheet .bio .textbox span.label {
     font-family: var(--font-primary);
     font-size: 14px;
@@ -6859,8 +6827,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     background-color: var(--color-yellow);
     color: var(--color-bg-dark);
 }
+}
 
-/* Setting */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Charsheet Setting */
 .charsheet .class_options,
 .charsheet .skill_options,
 .charsheet .attribute_options,
@@ -6875,7 +6845,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .options .col2 {
     margin-left: 6px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Character Editor */
 .charactereditor .avatar,
 .charactereditor .defaulttoken {
@@ -6891,10 +6863,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .tokenslot small {
     color: var(--color-text-disabled);
 }
+}
 
-/* -------------------------------------------------------------------------- */
-/*                                     NPC                                    */
-/* -------------------------------------------------------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* NPC */
 .charsheet .licensecontainer .npc_toggle[value="1"] ~ .npc .actions,
 .charsheet .licensecontainer .npc_toggle[value="1"] ~ .npc .stat-block {
     background-color: var(--color-element-bg);
@@ -6929,8 +6901,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     color: var(--color-button-hover);
     box-shadow: 0px 0px 10px var(--color-yellow);
 }
+}
 
-/* Whisper toggle */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* NPC Whisper toggle */
 .charsheet .npc_toggle[value="1"] ~ .advantagetoggle.whispertoggle {
     left: 505px;
     top: -15px;
@@ -7245,8 +7219,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     width: 90%;
     font-size: 12px;
 }
+}
 
-/* ------------------------------ Charactermancer --------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Charactermancer */
 .charsheet .showleveler[value="1"] + .levelerbutton {
     width: 18px;
     border-radius: 2px;
@@ -7439,7 +7415,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet div.charmancer .summary:nth-child(even) {
     background-color: var(--color-bg-light);
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Popups */
 .charsheet .licensecontainer.active-drop-target.dropping ~ .compendium_warning,
 .charsheet .monster_confirm_flag[value="1"] ~ .monster_confirm,
@@ -7470,8 +7448,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .mancer_confirm input[type="checkbox"] {
     height: 35px;
 }
+}
 
-/* ------------------------------ Token Settings ---------------------------- */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Token Settings */
 .tokeneditor__dropdown .btn {
     background-image: none;
     background-color: var(--color-button-main);
@@ -7482,12 +7462,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     fill: var(--color-yellow);
     padding-top: 3px;
 }
+}
 
-/* ------------------------------ Map Settings ------------------------------ */
-/*#color_selector
-        + .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-draggable.ui-resizable.ui-dialog-buttons {
-        min-width: 500px;
-    }*/
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Map Settings */
 .pagedetails .disable_box,
 .tokeneditor .disable_box {
     background: var(--color-bg-dark) !important;
@@ -7638,8 +7616,10 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .pagedetails .row {
     margin-top: 10px;
 }
+}
 
-/* ------------------------------- Dice Roller ------------------------------ */
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
+/* Dice Roller */
 #dicerollerdialog .table-striped > tbody > tr:nth-of-type(odd) {
     background-color: var(--color-element-bg);
     border: 0px;
@@ -7683,7 +7663,9 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 #dicerollerdialog .btn.btn-primary.rolladvanced {
     margin-bottom: 3px;
 }
+}
 
+@-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Radio */
 #dicerollerdialog input[type="radio"] {
     position: relative;
@@ -7718,10 +7700,15 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     left: 2.5px;
     box-shadow: 0px 0px 5px var(--color-yellow);
 }
+
+.col2-3{
+    width:534px;
+}
 }
 
 @-moz-document url-prefix("https://app.roll20.net/compendium/") {
 /* Scrollbar */
+
 body::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 8px;
@@ -8029,222 +8016,5 @@ caption {
 
 .booktemplate.list li.header-tiny {
     width: calc(10% - 5px) !important;
-}
-}
-
-@-moz-document domain("app.roll20.net") {
-/*Radial Menu*/
-#radial-menu .markermenu.open {
-    width: 410px !important;
-}
-
-#radial-menu .markermenu.open {
-    top: 66px !important;
-    background-color: rgba(55, 58, 82, 0.9);
-    color: White;
-}
-
-#radial-menu .markermenu .markericon {
-    width: 95px !important;
-    padding-left: 28px !important;
-    font-size: 1em !important;
-}
-
-#radial-menu .markermenu .markercolor {
-    width: 60px !important;
-    padding-left: 28px !important;
-    font-size: 1em !important;
-    color: #000 !important;
-    font-weight: bold;
-}
-
-#radial-menu .markermenu .markercolor.dead {
-    background-color: #CC1010 !important;
-    color: #000 !important;
-    top: 0px !important;
-    border-radius: 20px;
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-top: 5px;
-}
-
-div[data-action-type=toggle_status_dead]::after {
-    content: " Dead" !important;
-}
-
-div[data-action-type=toggle_status_blue]::after {
-    content: "Blue" !important;
-}
-div[data-action-type=toggle_status_red]::after {
-    content: "Peter" !important;
-}
-div[data-action-type=toggle_status_green]::after {
-    content: "Green" !important;
-}
-div[data-action-type=toggle_status_brown]::after {
-    content: "Brown" !important;
-}
-div[data-action-type=toggle_status_purple]::after {
-    content: "Purple" !important;
-}
-div[data-action-type=toggle_status_pink]::after {
-    content: "Pink" !important;
-}
-div[data-action-type=toggle_status_yellow]::after {
-    content: "Yellow" !important;
-}
-div[data-action-type=toggle_status_skull]::after {
-    content: "Unconscious" !important;
-}
-div[data-action-type=toggle_status_sleepy]::after {
-    content: "Sleeping" !important;
-}
-div[data-action-type=toggle_status_half-heart]::after {
-    content: "< 50% HP" !important;
-}
-div[data-action-type=toggle_status_interdiction]::after {
-    content: "Incapacitated" !important;
-}
-div[data-action-type=toggle_status_snail]::after {
-    content: "Slow" !important;
-}
-div[data-action-type=toggle_status_lightning-helix]::after {
-    content: "Stunned" !important;
-}
-div[data-action-type=toggle_status_chained-heart]::after {
-    content: "Charmed" !important;
-}
-div[data-action-type=toggle_status_chemical-bolt]::after {
-    content: "Deafened" !important;
-}
-div[data-action-type=toggle_status_death-zone]::after {
-    content: "Area" !important;
-}
-div[data-action-type=toggle_status_drink-me]::after {
-    content: "Poisoned" !important;
-}
-div[data-action-type=toggle_status_ninja-mask]::after {
-    content: "Invisible" !important;
-}
-div[data-action-type=toggle_status_stopwatch]::after {
-    content: "Consentrating" !important;
-}
-div[data-action-type=toggle_status_fishing-net]::after {
-    content: "Captured" !important;
-}
-div[data-action-type=toggle_status_overdrive]::after {
-    content: "Effect" !important;
-}
-div[data-action-type=toggle_status_strong]::after {
-    content: "Buffed A" !important;
-}
-div[data-action-type=toggle_status_fist]::after {
-    content: "Buffed B" !important;
-}
-div[data-action-type=toggle_status_padlock]::after {
-    content: "Restrained" !important;
-}
-div[data-action-type=toggle_status_three-leaves]::after {
-    content: "Disguised" !important;
-}
-div[data-action-type=toggle_status_fluffy-wing]::after {
-    content: "Fly/Hover" !important;
-}
-div[data-action-type=toggle_status_pummeled]::after {
-    content: "Blindsight" !important;
-}
-div[data-action-type=toggle_status_tread]::after {
-    content: "Fast" !important;
-}
-div[data-action-type=toggle_status_aura]::after {
-    content: "Aura" !important;
-}
-div[data-action-type=toggle_status_back-pain]::after {
-    content: "Prone" !important;
-}
-div[data-action-type=toggle_status_bleeding-eye]::after {
-    content: "Blinded" !important;
-}
-div[data-action-type=toggle_status_broken-heart]::after {
-    content: "Vulnerable" !important;
-}
-div[data-action-type=toggle_status_cobweb]::after {
-    content: "No move" !important;
-}
-div[data-action-type=toggle_status_bolt-shield]::after {
-    content: "Def Up" !important;
-}
-div[data-action-type=toggle_status_broken-shield]::after {
-    content: "Def Down" !important;
-}
-div[data-action-type=toggle_status_radioactive]::after {
-    content: "Diseased" !important;
-}
-div[data-action-type=toggle_status_trophy]::after {
-    content: "VIP" !important;
-}
-div[data-action-type=toggle_status_frozen-orb]::after {
-    content: "Petrified" !important;
-}
-div[data-action-type=toggle_status_grab]::after {
-    content: "Grappled" !important;
-}
-div[data-action-type=toggle_status_screaming]::after {
-    content: "Frightened" !important;
-}
-div[data-action-type=toggle_status_sentry-gun]::after {
-    content: "Summon" !important;
-}
-div[data-action-type=toggle_status_archery-target]::after {
-    content: "Marked" !important;
-}
-
-/* Following icons are disabled */
-div[data-action-type=toggle_status_grenade] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_spanner] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_black-flag] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_all-for-one] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_rolling-bomb] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_white-tower] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_edge-crack] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_broken-skull] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_flying-flag] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_arrowed] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_half-haze] {
-    display: none !important;
-}
-
-div[data-action-type=toggle_status_angel-outfit] {
-    display: none !important;
 }
 }
