@@ -2549,11 +2549,9 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 /*Radial Menu*/
 
 #radial-menu .markermenu.open {
-    width: 410px !important;
-}
-
-#radial-menu .markermenu.open {
-    top: 66px !important;
+    width: 430px !important;
+    height: 485px;
+    top: 65% !important;
     background-color: rgba(55, 58, 82, 0.9);
     color: White;
 }
@@ -2761,6 +2759,76 @@ div[data-action-type=toggle_status_half-haze] {
 div[data-action-type=toggle_status_angel-outfit] {
     display: none !important;
 }
+
+#radial-menu{
+    width: 70px;
+    z-index: 6;
+    pointer-events: none;
+}
+
+#radial-menu .button{
+    height: 45px;
+    width: 50px;
+    border-radius: 0px;
+    border: none;
+    background: #555
+}
+
+#radial-menu .button.open{
+    opacity: 1;
+    line-height: 1.5em;
+    transition-timing-function: cubic-bezier(0.25, 0.25, 0.4, 1);
+    transition-timing-function: cubic-bezier(0.25, 0.25, 0.4, 1.65);
+}
+
+#radial-menu .button div.inner{
+    margin: 0px;
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#radial-menu .button[data-action-type] div.inner{
+    background: #222;
+    width: 50px;
+} 
+
+#radial-menu .button.animcomplete[data-action-type]{
+    cursor: pointer !important;
+}
+
+#radial-menu .button.animcomplete{
+    pointer-events: auto;
+}
+
+#radial-menu .button-1.open{
+    transform: translate(26px , -15px);
+} 
+
+#radial-menu .button-2.open{
+    transform: translate(23px , -27px );
+    z-index: 5;
+} 
+
+#radial-menu .button-3.open{
+    background: rgb(124,196,138);
+    transform: translate(-5px , 30px);
+}
+
+#radial-menu .button-4.open{
+    background: rgb(124,155,196);
+    transform: translate(2px , 30px);
+}
+
+#radial-menu .button-5.open{
+    background: rgb(179,29,29);
+    transform: translate(-12px , 30px);
+}
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
@@ -2780,10 +2848,10 @@ div[data-action-type=toggle_status_angel-outfit] {
 }
 
 #page-toolbar .pages .availablepage .page-actions {
-    left: -1px;
+    left: 35px;
     flex-direction: row;
     top: 58px;
-    width: 080px;
+    width: 90px;
     padding: 0px;
 }
 
@@ -2920,6 +2988,10 @@ div[data-action-type=toggle_status_angel-outfit] {
 #floatingtoolbar li#measure div.submenu li[mode="hide"] {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAzUlEQVRIx6WW2w6AIAxD1///aROjguu6S+DJwBHKWkGzRgNs0IAJD0x4gPjkbYD4bDUwjxkPxd99bf7pG/JSPlLp+/Dq8KMRvfE8X7j04lmf2pgQyKFEtGhWgQH/3+ZaHMU2twfJb3XzvLboN/7pEXlnU8T0wvXHLxXHV4yrHvT0r3+BtkS7s78sTZRPeZiEfHb4MF+ml/PQ5o3Dnn8eEe/8kds0DpQsyxoIXNcWoVMB+JbzOOQrPRXtr4uK9rGpaB+bij67aqcXefc34QIjaANcoErBQAAAAABJRU5ErkJggg==");
 }
+
+.dark-mode-switch.gmstyle{
+    top: 300px;
+}
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
@@ -3023,7 +3095,10 @@ div[data-action-type=toggle_status_angel-outfit] {
     font-family: var(--font-header);
     font-size: 18px;
     max-width: 450px;
-    min-width: 250px;
+    min-width: 250px;    
+    width: calc(100% - 288px) !important;
+    max-height: 80%;
+    opacity: 1;
 }
 
 #page-toolbar .pages {
@@ -3047,6 +3122,17 @@ div[data-action-type=toggle_status_angel-outfit] {
     background-color: var(--color-element-bg);
     box-shadow: 0px 0px 5px var(--color-text-disabled);
     border-radius: 0px 0px 5px 5px;
+    position:absolute;
+    right: 60px;
+    width: 24px;
+    height: 24px;
+    z-index: 10000;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 26px;
+    color: #333;
+    text-align: center;
+    padding: 3px 3px 6px 3px;
 }
 
 #page-toolbar .container {
@@ -3098,7 +3184,7 @@ div[data-action-type=toggle_status_angel-outfit] {
     float: left;
     height: 50px;
     top: 12px;
-    left: 5px;
+    left: -5px;
 }
 
 .fas.fa-file {
@@ -3132,7 +3218,7 @@ div[data-action-type=toggle_status_angel-outfit] {
     font-size: 25px;
     font-weight: 300;
     position: relative;
-    left: 0px;
+    left: 35px;
     top: 10px;
     max-width: 80%;
     word-wrap: normal !important;
@@ -3141,7 +3227,7 @@ div[data-action-type=toggle_status_angel-outfit] {
     align-items: center !important;
 }
 
-#page-toolbar .pages .availablepage .page-actions .page-actions__item {
+ .page-actions__item {
     padding: 0px;
     width: 30px;
 }
@@ -5661,8 +5747,8 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 .charsheet .npc button[type="roll"] {
     color: var(--color-text-primary);
     font-weight: 400;
-    width: 95%;
     left: 0px;
+    position: relative !important;
 }
 
 .charsheet button[type="roll"]:hover,
