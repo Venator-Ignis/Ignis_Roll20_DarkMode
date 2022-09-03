@@ -2,15 +2,26 @@
 /* ==UserStyle==
 @name           Venator_Ignis Roll20 Dark Mode
 @namespace      github.com/openstyles/stylus
-@version        1.1.1
+@updateURL      https://userstyles.world/style/6385/venator-ignis-roll20-dark-mode
+@version        1.1.12
 @description    Venator_Ignis's version of Roll20 Dark Mode
 @author         Venator_Ignis
 ==/UserStyle== */
 }
 
 @-moz-document url-prefix("https://app.roll20.net/") {
-/* Variables */
+/* Currency Change */
+:root {
+    --Currency1: "Copper Piece";
+    --Currency2: "Silver Piece";
+    --Currency3: "Gold Piece";
+    --Currency4: "Contribution";
+    --Currency5: "Spirit Stones";
+}
+}
 
+@-moz-document url-prefix("https://app.roll20.net/") {
+/* Variables */
 :root {
     --color-bg-light: #242533;
     --color-bg-light-rgba: rgb(36, 37, 51, 0.95);
@@ -2435,7 +2446,6 @@ body {
 #vm_hide_reveal a.reset-el {
     color: var(--color-yellow);
 }
-
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
@@ -2547,7 +2557,6 @@ div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div button.picto
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
 /*Radial Menu*/
-
 #radial-menu .markermenu.open {
     width: 430px !important;
     height: 485px;
@@ -2760,13 +2769,13 @@ div[data-action-type=toggle_status_angel-outfit] {
     display: none !important;
 }
 
-#radial-menu{
+#radial-menu {
     width: 70px;
     z-index: 6;
     pointer-events: none;
 }
 
-#radial-menu .button{
+#radial-menu .button {
     height: 45px;
     width: 50px;
     border-radius: 0px;
@@ -2774,14 +2783,14 @@ div[data-action-type=toggle_status_angel-outfit] {
     background: #555
 }
 
-#radial-menu .button.open{
+#radial-menu .button.open {
     opacity: 1;
     line-height: 1.5em;
     transition-timing-function: cubic-bezier(0.25, 0.25, 0.4, 1);
     transition-timing-function: cubic-bezier(0.25, 0.25, 0.4, 1.65);
 }
 
-#radial-menu .button div.inner{
+#radial-menu .button div.inner {
     margin: 0px;
     border-radius: 0px;
     width: 30px;
@@ -2793,41 +2802,41 @@ div[data-action-type=toggle_status_angel-outfit] {
     white-space: nowrap;
 }
 
-#radial-menu .button[data-action-type] div.inner{
+#radial-menu .button[data-action-type] div.inner {
     background: #222;
     width: 50px;
-} 
+}
 
-#radial-menu .button.animcomplete[data-action-type]{
+#radial-menu .button.animcomplete[data-action-type] {
     cursor: pointer !important;
 }
 
-#radial-menu .button.animcomplete{
+#radial-menu .button.animcomplete {
     pointer-events: auto;
 }
 
-#radial-menu .button-1.open{
-    transform: translate(26px , -15px);
-} 
+#radial-menu .button-1.open {
+    transform: translate(26px, -15px);
+}
 
-#radial-menu .button-2.open{
-    transform: translate(23px , -27px );
+#radial-menu .button-2.open {
+    transform: translate(23px, -27px);
     z-index: 5;
-} 
-
-#radial-menu .button-3.open{
-    background: rgb(124,196,138);
-    transform: translate(-5px , 30px);
 }
 
-#radial-menu .button-4.open{
-    background: rgb(124,155,196);
-    transform: translate(2px , 30px);
+#radial-menu .button-3.open {
+    background: rgb(124, 196, 138);
+    transform: translate(-5px, 30px);
 }
 
-#radial-menu .button-5.open{
-    background: rgb(179,29,29);
-    transform: translate(-12px , 30px);
+#radial-menu .button-4.open {
+    background: rgb(124, 155, 196);
+    transform: translate(2px, 30px);
+}
+
+#radial-menu .button-5.open {
+    background: rgb(179, 29, 29);
+    transform: translate(-12px, 30px);
 }
 }
 
@@ -2989,7 +2998,7 @@ div[data-action-type=toggle_status_angel-outfit] {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURUdwTOzt9oDcdx0AAAABdFJOUwBA5thmAAAAzUlEQVRIx6WW2w6AIAxD1///aROjguu6S+DJwBHKWkGzRgNs0IAJD0x4gPjkbYD4bDUwjxkPxd99bf7pG/JSPlLp+/Dq8KMRvfE8X7j04lmf2pgQyKFEtGhWgQH/3+ZaHMU2twfJb3XzvLboN/7pEXlnU8T0wvXHLxXHV4yrHvT0r3+BtkS7s78sTZRPeZiEfHb4MF+ml/PQ5o3Dnn8eEe/8kds0DpQsyxoIXNcWoVMB+JbzOOQrPRXtr4uK9rGpaB+bij67aqcXefc34QIjaANcoErBQAAAAABJRU5ErkJggg==");
 }
 
-.dark-mode-switch.gmstyle{
+.dark-mode-switch.gmstyle {
     top: 300px;
 }
 }
@@ -3083,7 +3092,6 @@ div[data-action-type=toggle_status_angel-outfit] {
     left: -6px;
     box-shadow: 0px 0px 5px var(--color-text-disabled);
 }
-
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
@@ -3095,7 +3103,7 @@ div[data-action-type=toggle_status_angel-outfit] {
     font-family: var(--font-header);
     font-size: 18px;
     max-width: 450px;
-    min-width: 250px;    
+    min-width: 250px;
     width: calc(100% - 288px) !important;
     max-height: 80%;
     opacity: 1;
@@ -3122,7 +3130,7 @@ div[data-action-type=toggle_status_angel-outfit] {
     background-color: var(--color-element-bg);
     box-shadow: 0px 0px 5px var(--color-text-disabled);
     border-radius: 0px 0px 5px 5px;
-    position:absolute;
+    position: absolute;
     right: 60px;
     width: 24px;
     height: 24px;
@@ -3227,7 +3235,7 @@ div[data-action-type=toggle_status_angel-outfit] {
     align-items: center !important;
 }
 
- .page-actions__item {
+.page-actions__item {
     padding: 0px;
     width: 30px;
 }
@@ -3338,7 +3346,6 @@ div[data-action-type=toggle_status_angel-outfit] {
 #rightsidebar div.content a:not(.btn) {
     color: var(--color-yellow) !important;
 }
-
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
@@ -3475,7 +3482,6 @@ div[data-action-type=toggle_status_angel-outfit] {
     background-color: var(--color-button-hover);
     box-shadow: 0px 0px 5px var(--color-button-main);
 }
-
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
@@ -5212,7 +5218,8 @@ div.clear + strong {
 
 .charsheet .header span {
     color: var(--color-text-disabled);
-    font-size: 11px;;
+    font-size: 11px;
+    ;
 }
 
 .attributesabilities .abil {
@@ -5498,7 +5505,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     padding-left: 5px;
 }
 
-.licensecontainer .container:not(.npc) .hp .top span{
+.licensecontainer .container:not(.npc) .hp .top span {
     margin-left: 15px !important;
 }
 
@@ -5735,6 +5742,16 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     box-shadow: 0px 0px 2px var(--color-text-disabled);
     border: 0px;
 }
+
+.licensecontainer .container:not(.npc) .bio .textbox textarea {
+    margin: 0 auto;
+    text-align: left;
+    width: calc(100% - 20px) !important;
+    background: transparent;
+    resize: both;
+    display: block;
+    min-height: 470px !important;
+}
 }
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
@@ -5867,17 +5884,17 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 }
 
 .charsheet .hp .top input,
-.charsheet .hdice-dsaves-container .top input[type="text"]{
+.charsheet .hdice-dsaves-container .top input[type="text"] {
     color: var(--color-text-primary);
     font-family: var(--font-number);
     font-size: 12px !important;
 }
 
-.charsheet .hp .top span{
+.charsheet .hp .top span {
     width: 90%;
 }
 
-.charsheet .hp .top input{
+.charsheet .hp .top input {
     margin-left: 54px;
 }
 
@@ -6231,20 +6248,20 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     min-height: 140px;
 }
 
-.charsheet .licensecontainer .container:not(.npc) .equipment .money{
+.charsheet .licensecontainer .container:not(.npc) .equipment .money {
     width: 248px;
     height: 215px;
-    display:grid;
+    display: grid;
     grid: 35px/ auto;
     padding: 1px;
     row-gap: 3px;
     grid-row-start: 1;
     grid-row-end: 5;
-    float:right;
+    float: right;
     align-content: center;
 }
 
-.charsheet .licensecontainer .container:not(.npc) .equipment .money .coin{
+.charsheet .licensecontainer .container:not(.npc) .equipment .money .coin {
     width: 250px;
 }
 
@@ -6271,13 +6288,13 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     width: auto;
 }
 
-.licensecontainer .container:not(.npc) .coin .label{
+.licensecontainer .container:not(.npc) .coin .label {
     visibility: hidden;
 }
 
-.licensecontainer .container:not(.npc) .coin .label:after{
+.licensecontainer .container:not(.npc) .coin .label:after {
     visibility: visible;
-    content: ' Copper Piece ';
+    content: var(--Currency1);
     font-size: 11px;
     font-weight: bold;
     color: var(--color-text-primary);
@@ -6289,27 +6306,27 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     vertical-align: middle;
 }
 
-.licensecontainer .container:not(.npc) .coin + .coin .label:after{
+.licensecontainer .container:not(.npc) .coin + .coin .label:after {
     visibility: visible;
-    content: ' Silver Piece ';
+    content: var(--Currency2);
 }
 
-.licensecontainer .container:not(.npc) .coin  + .coin  + .coin .label:after{
+.licensecontainer .container:not(.npc) .coin + .coin + .coin .label:after {
     visibility: visible;
-    content: ' Gold Piece ';
+    content: var(--Currency3);
 }
 
-.licensecontainer .container:not(.npc) .coin  + .coin  + .coin  + .coin .label:after{
+.licensecontainer .container:not(.npc) .coin + .coin + .coin + .coin .label:after {
     visibility: visible;
-    content: ' Platinum Piece ';
+    content: var(--Currency4);
 }
 
-.licensecontainer .container:not(.npc) .coin  + .coin  + .coin  + .coin  + .coin .label:after{
+.licensecontainer .container:not(.npc) .coin + .coin + .coin + .coin + .coin .label:after {
     visibility: visible;
-    content: ' Other ';
+    content: var(--Currency5);
 }
 
-.licensecontainer .container:not(.npc) .equipment .money .coin input{
+.licensecontainer .container:not(.npc) .equipment .money .coin input {
     left: 75px !important;
     width: 170px !important;
     font-size: 20px !important;
@@ -6497,7 +6514,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* Speed Init */
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .init span,
-.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .speed input{
+.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .speed input {
     font-size: 25px;
     font-weight: 700;
 }
@@ -6505,7 +6522,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 
 @-moz-document url-prefix("https://app.roll20.net/editor/") {
 /* AC */
-.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .ac input{
+.charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .ac input {
     font-size: 18px;
     font-weight: 700;
 }
@@ -7787,14 +7804,13 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     box-shadow: 0px 0px 5px var(--color-yellow);
 }
 
-.col2-3{
-    width:534px;
+.col2-3 {
+    width: 534px;
 }
 }
 
 @-moz-document url-prefix("https://app.roll20.net/compendium/") {
 /* Scrollbar */
-
 body::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 8px;
