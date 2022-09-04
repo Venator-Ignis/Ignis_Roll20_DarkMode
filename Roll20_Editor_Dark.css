@@ -2826,17 +2826,17 @@ div[data-action-type=toggle_status_angel-outfit] {
 
 #radial-menu .button-3.open {
     background: rgb(124, 196, 138);
-    transform: translate(-5px, 30px);
+    transform: translate(-5px, 3px);
 }
 
 #radial-menu .button-4.open {
     background: rgb(124, 155, 196);
-    transform: translate(2px, 30px);
+    transform: translate(2px, 3px);
 }
 
 #radial-menu .button-5.open {
     background: rgb(179, 29, 29);
-    transform: translate(-12px, 30px);
+    transform: translate(-12px, 3px);
 }
 }
 
