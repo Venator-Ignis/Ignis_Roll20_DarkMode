@@ -3,7 +3,7 @@
 @name           Venator_Ignis Roll20 Dark Mode
 @namespace      github.com/openstyles/stylus
 @updateURL      https://userstyles.world/style/6385/venator-ignis-roll20-dark-mode
-@version        1.1.12
+@version        1.1.81
 @description    Venator_Ignis's version of Roll20 Dark Mode
 @author         Venator_Ignis
 ==/UserStyle== */
@@ -14,9 +14,9 @@
 :root {
     --Currency1: "Copper Piece";
     --Currency2: "Silver Piece";
-    --Currency3: "Gold Piece";
-    --Currency4: "Contribution";
-    --Currency5: "Spirit Stones";
+    --Currency3: "Electrum Piece";
+    --Currency4: "Gold Piece";
+    --Currency5: "Platinum Piece";
 }
 }
 
@@ -2816,11 +2816,11 @@ div[data-action-type=toggle_status_angel-outfit] {
 }
 
 #radial-menu .button-1.open {
-    transform: translate(26px, -15px);
+    transform: translate(26px, 26px);
 }
 
 #radial-menu .button-2.open {
-    transform: translate(23px, -27px);
+    transform: translate(23px, 15px);
     z-index: 5;
 }
 
@@ -4357,13 +4357,15 @@ div.dropbox.filled:hover {
 #textchat-input {
     padding: 10px 5px !important;
     /*box-shadow: 0 -3px 5px -3px var(--color-text-disabled);*/
-    height: 90px !important;
+    height: 150px !important;
     background-color: var(--color-bg-light);
     border: 0px;
 }
 
 #textchat-input textarea {
     width: calc(100% - 10px) !important;
+    min-height: 75px;
+    resize: vertical;
     height: 35px;
     margin-bottom: 5px;
 }
@@ -4390,7 +4392,7 @@ div.dropbox.filled:hover {
 }
 
 #rightsidebar #textchat {
-    height: calc(100% - 145px) !important;
+    height: calc(100% - 207px) !important;
 }
 }
 
@@ -5592,6 +5594,7 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
 
 .charsheet .skills-saves-container {
     margin-right: 0px;
+    width: 184px;
 }
 
 .charsheet .licensecontainer .container:not(.npc) .pibf .label {
@@ -6602,6 +6605,11 @@ input[type="checkbox"][name="attr_global_damage_active_flag"]:checked:before,
     background-position-y: 2px !important;
     background-position-x: calc(100% - 0px) !important;
     box-shadow: 0px 0px 2px var(--color-text-disabled) !important;
+}
+
+.charsheet .licensecontainer .container:not(.npc) .saving-throw-container, 
+.charsheet .licensecontainer .container:not(.npc) .skills-container {
+    width: 183px;    
 }
 
 .charsheet .licensecontainer .container:not(.npc) .ac-init-speed-container .init button,
