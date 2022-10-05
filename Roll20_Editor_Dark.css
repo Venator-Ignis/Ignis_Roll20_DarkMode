@@ -3,7 +3,7 @@
 @name           Venator_Ignis Roll20 Dark Mode
 @namespace      github.com/openstyles/stylus
 @updateURL      https://userstyles.world/style/6385/venator-ignis-roll20-dark-mode
-@version        1.1.85
+@version        1.1.86
 @description    Venator_Ignis's version of Roll20 Dark Mode
 @author         Venator_Ignis
 ==/UserStyle== */
@@ -4387,6 +4387,7 @@ div.dropbox.filled:hover {
 #textchat-notifier {
     background-color: var(--color-bg-light);
     color: var(--color-yellow);
+    top: 0px;
 }
 
 #rightsidebar #textchat {
